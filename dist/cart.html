@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<title>Корзина</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/fancybox.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+	</head>
+
+	<body class="preload mp">
+		<div class="main-wrapper-outer">
+			<header class="header">
+				<div class="container">
+					<div class="header__content">
+						<div class="header-top">
+							<a href="./" class="header-top__logo">
+								<img src="img/icons/logo2.svg" alt="">
+							</a>
+							<div class="header-top__right">
+								<div class="header-top__icons">
+									<a href="./">
+										<img src="img/icons/box.svg" alt="">
+									</a>
+									<a href="./">
+										<img src="img/icons/cart.svg" alt="">
+									</a>
+									<a href="./">
+										<img src="img/icons/settings.svg" alt="">
+									</a>
+									<a data-da=".header-bottom__icons, 768" href="./">
+										<img src="img/icons/users.svg" alt="">
+									</a>
+									<a data-da=".header-bottom__icons, 768" href="./">
+										<img src="img/icons/login.svg" alt="">
+									</a>
+								</div>
+								<div class="header-top__location">
+									<a data-da=".header-top__icons, 768,last" href="./">
+										<img src="img/icons/rotate.svg" alt="">
+									</a>
+									<span>ООО ТАМБОВ-АВТО-СИТИ, Тамбов</span>
+								</div>
+							</div>
+						</div>
+						<div class="header-bottom">
+							<div class="header-bottom__body">
+								<button type="button" class="icon-menu"><span></span></button>
+								<div class="header-bottom__menu">
+									<ul>
+										<li>
+											<a href="./">О нас</a>
+										</li>
+										<li>
+											<a href="./">Оплата</a>
+										</li>
+										<li>
+											<a href="./">Доставка</a>
+										</li>
+										<li>
+											<a href="./">Помощь</a>
+										</li>
+										<li>
+											<a href="./">Отзывы</a>
+										</li>
+										<li>
+											<a href="./">Контакты</a>
+										</li>
+									</ul>
+									<div class="header-bottom__icons"></div>
+								</div>
+							</div>
+							<div class="header-bottom__right">
+								<div data-da=".header-bottom__menu, 768, first" class="header-search">
+									<div class="header-search__input">
+										<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
+										<div class="header-search__close">
+											<img src="img/icons/close.svg" alt="">
+										</div>
+									</div>
+									<button type="button" class="header-search__button">
+										<img src="img/icons/search.svg" alt="">
+									</button>
+								</div>
+								<div data-da=".header-bottom__menu, 768, last" class="header-bottom__contacts">
+									<a href="./" class="header-bottom__contact">
+										<img src="img/icons/max.svg" alt="">
+									</a>
+									<a href="./" class="header-bottom__contact">
+										<img src="img/icons/telegram.svg" alt="">
+									</a>
+									<a href="./" class="header-bottom__contact">
+										<img src="img/icons/phone.svg" alt="">
+										<span>+7 (937) 217-46-57</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+
+				<div class="breadcrumbs">
+					<div class="container">
+						<ul>
+							<li>
+								<a href="#">
+									Главная
+									<img src="img/icons/arrow1.svg" alt="">
+								</a>
+							</li>
+							<li><span>Корзина</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="block-cart">
+					<div class="container">
+						<div class="block-cart__content">
+							<div class="menu-services">
+								<div class="menu-services__content">
+									<ul>
+										<li><a href="./" class="active">Оформление авто</a></li>
+										<li><a href="./">Полиграфия</a></li>
+										<li><a href="./">Таблички</a></li>
+										<li><a href="./">Пакеты и ручки</a></li>
+										<li><a href="./">Флаги</a></li>
+										<li><a href="./">Наклейки</a></li>
+										<li><a href="./">Сувенирная продукция</a></li>
+										<li><a href="./">Инфо стенды</a></li>
+										<li><a href="./">Комплекты POS</a></li>
+										<li><a href="./">Аксессуары</a></li>
+										<li><a href="./">Ежедневники</a></li>
+										<li><a href="./">Кружки и термосы</a></li>
+										<li><a href="./">Мероприятия</a></li>
+										<li class="menu-last"><a href="./">Прочие бренды</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="block-cart__body">
+								<div class="block-cart__top">
+									<div class="cart-tables">
+										<div class="cart-tables__main-table">
+											<div class="cart-tables__left">
+												<div class="cart-tables__title cart-tables-title">Наименование</div>
+											</div>
+											<div class="cart-tables__right">
+												<div class="cart-tables__apps cart-tables-title"></div>
+												<div class="cart-tables__quantity cart-tables-title">Количество</div>
+												<div class="cart-tables__prices cart-tables-title">Стоимость</div>
+												<div class="cart-tables__close cart-tables-title"></div>
+											</div>
+										</div>
+										<div class="cart-tables__table">
+											<a href="./" class="cart-tables__left">
+												<div class="cart-tables__image">
+													<img src="img/services/image2.webp" alt="">
+												</div>
+												<div class="cart-tables__name">
+													Визитная карточка
+													<span>Односторонняя, XL</span>
+												</div>
+											</a>
+											<div class="cart-tables__right">
+												<a href="./" class="cart-tables__apps">
+													<img src="img/icons/apps.svg" alt="">
+												</a>
+												<div class="cart-tables__quantity">
+													<div data-quantity class="quantity">
+														<button data-quantity-minus type="button" class="quantity__button quantity__button_minus disabled">
+															<img src="img/icons/minus.svg" alt="">
+														</button>
+														<div class="quantity__input">
+															<input data-quantity-value disabled autocomplete="off" type="text" name="form[]" value="96">
+														</div>
+														<button data-quantity-plus type="button" class="quantity__button quantity__button_plus disabled">
+															<img src="img/icons/plus.svg" alt="">
+														</button>
+													</div>
+												</div>
+												<div class="cart-tables__prices">
+													<div class="cart-tables__price">
+														5 600 ₽
+														<span>скидка 10%</span>
+													</div>
+												</div>
+												<div class="cart-tables__close">
+													<button type="button">
+														<img src="img/icons/close2.svg" alt="">
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="cart-tables__table">
+											<a href="./" class="cart-tables__left">
+												<div class="cart-tables__image">
+													<img src="img/services/image7.webp" alt="">
+												</div>
+												<div class="cart-tables__name">
+													Комплект мобильного флага
+												</div>
+											</a>
+											<div class="cart-tables__right">
+												<div class="cart-tables__apps">
+												</div>
+												<div class="cart-tables__quantity">
+													<div data-quantity class="quantity">
+														<button data-quantity-minus type="button" class="quantity__button quantity__button_minus">
+															<img src="img/icons/minus.svg" alt="">
+														</button>
+														<div class="quantity__input">
+															<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+														</div>
+														<button data-quantity-plus type="button" class="quantity__button quantity__button_plus">
+															<img src="img/icons/plus.svg" alt="">
+														</button>
+													</div>
+												</div>
+												<div class="cart-tables__prices">
+													<div class="cart-tables__price">
+														10 600 ₽
+													</div>
+												</div>
+												<div class="cart-tables__close">
+													<button type="button">
+														<img src="img/icons/close2.svg" alt="">
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="cart-tables__table">
+											<a href="./" class="cart-tables__left">
+												<div class="cart-tables__image">
+													<img src="img/services/image1.webp" alt="">
+												</div>
+												<div class="cart-tables__name">
+													Оформление автомобиля NIVA Travel (1.8)
+													<span>Тест-драйв, Standart (обычный), цвет белый</span>
+												</div>
+											</a>
+											<div class="cart-tables__right">
+												<div class="cart-tables__apps">
+												</div>
+												<div class="cart-tables__quantity">
+													<div data-quantity class="quantity">
+														<button data-quantity-minus type="button" class="quantity__button quantity__button_minus disabled">
+															<img src="img/icons/minus.svg" alt="">
+														</button>
+														<div class="quantity__input">
+															<input data-quantity-value disabled autocomplete="off" type="text" name="form[]" value="1">
+														</div>
+														<button data-quantity-plus type="button" class="quantity__button quantity__button_plus disabled">
+															<img src="img/icons/plus.svg" alt="">
+														</button>
+													</div>
+												</div>
+												<div class="cart-tables__prices">
+													<div class="cart-tables__price">
+														3 294 ₽
+													</div>
+												</div>
+												<div class="cart-tables__close">
+													<button type="button">
+														<img src="img/icons/close2.svg" alt="">
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="cart-tables__table">
+											<a href="./" class="cart-tables__left">
+												<div class="cart-tables__image border">
+													<img src="img/services/image1.webp" alt="">
+												</div>
+												<div class="cart-tables__name">
+													Оформление автомобиля NIVA Legend
+													<span>Тест-драйв, Standart (обычный), цвет белый</span>
+												</div>
+											</a>
+											<div class="cart-tables__right">
+												<div class="cart-tables__apps">
+												</div>
+												<div class="cart-tables__quantity">
+													<div data-quantity class="quantity">
+														<button data-quantity-minus type="button" class="quantity__button quantity__button_minus disabled">
+															<img src="img/icons/minus.svg" alt="">
+														</button>
+														<div class="quantity__input">
+															<input data-quantity-value disabled autocomplete="off" type="text" name="form[]" value="1">
+														</div>
+														<button data-quantity-plus type="button" class="quantity__button quantity__button_plus disabled">
+															<img src="img/icons/plus.svg" alt="">
+														</button>
+													</div>
+												</div>
+												<div class="cart-tables__prices">
+													<div class="cart-tables__price">
+														3 294 ₽
+													</div>
+												</div>
+												<div class="cart-tables__close">
+													<button type="button">
+														<img src="img/icons/close2.svg" alt="">
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="cart-tables__table">
+											<a href="./" class="cart-tables__left">
+												<div class="cart-tables__image">
+													<img src="img/services/image3.webp" alt="">
+												</div>
+												<div class="cart-tables__name">
+													Пакет “Пилон”
+												</div>
+											</a>
+											<div class="cart-tables__right">
+												<div class="cart-tables__apps">
+												</div>
+												<div class="cart-tables__quantity">
+													<div data-quantity class="quantity">
+														<button data-quantity-minus type="button" class="quantity__button quantity__button_minus">
+															<img src="img/icons/minus.svg" alt="">
+														</button>
+														<div class="quantity__input">
+															<input data-quantity-value autocomplete="off" type="text" name="form[]" value="500">
+														</div>
+														<button data-quantity-plus type="button" class="quantity__button quantity__button_plus">
+															<img src="img/icons/plus.svg" alt="">
+														</button>
+													</div>
+												</div>
+												<div class="cart-tables__prices">
+													<div class="cart-tables__price">
+														23 294 ₽
+														<span>скидка 10%</span>
+													</div>
+												</div>
+												<div class="cart-tables__close">
+													<button type="button">
+														<img src="img/icons/close2.svg" alt="">
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="./" class="block-cart__calendar">
+										<img src="img/icons/calendar.svg" alt="">
+										<span>Получить заказ до определенной даты</span>
+									</a>
+								</div>
+								<div class="block-cart__bottom">
+									<div class="block-cart__total">
+										Итого: 39 600 ₽
+										<div class="block-cart__sale">
+											Выгода: <span>7000 ₽</span>
+										</div>
+									</div>
+									<a href="./" class="btn">Оформить доставку</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-cart-detail">
+					<div class="container">
+						<form action="#" class="form">
+							<div class="form__column">
+								<div class="form__title">Доставка</div>
+								<div class="form__body">
+									<div class="form__inputs disabled">
+										<div class="form__input">
+											<label for="client1">Заказчик</label>
+											<input id="client1" autocomplete="off" type="text" name="form[]" data-error="Обязательно поле" placeholder="ООО “Тамбов-авто-сити”">
+										</div>
+										<div class="form__input">
+											<label for="contract1">Договор</label>
+											<input id="contract1" autocomplete="off" type="text" name="form[]" data-error="Обязательно поле" placeholder="ЫЫЫ-2223-4235">
+										</div>
+									</div>
+									<div class="form__inputs">
+										<div class="form__input">
+											<label for="select1">Маркетолог</label>
+											<select id="select1" name="form[]" class="select">
+												<option value="" data-show data-label selected></option>
+												<option value="1">Пункт №1</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+									</div>
+									<div class="form__inputs">
+										<div class="form__input">
+											<label for="select2">Способ доставки</label>
+											<select id="select2" name="form[]" class="select">
+												<option value="" data-show data-label selected>Выберите способ доставки
+												</option>
+												<option value="1">Пункт №1</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+										<div class="form__input">
+											<label for="select3">Контактное лицо для доставки</label>
+											<select id="select3" name="form[]" class="select">
+												<option value="" data-show data-label selected>Выберите контактное лицо
+												</option>
+												<option value="1">Пункт №1</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+									</div>
+									<div class="form__inputs">
+										<div class="form__input">
+											<label for="select4">Адрес</label>
+											<select id="select4" name="form[]" class="select">
+												<option value="" data-show data-label selected>Выберите адрес</option>
+												<option value="1">Пункт №1</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+									</div>
+									<div class="form__inputs">
+										<div id="map1" class="map"></div>
+									</div>
+								</div>
+							</div>
+							<div class="form__column">
+								<div class="form__title">Способ оплаты</div>
+								<div class="form__body">
+									<div class="options">
+										<div class="options__column">
+											<label class="options__item">
+												<input hidden class="options__input" checked type="radio" value="1" name="option">
+												<span class="options__label">
+													Предоплата
+												</span>
+											</label>
+											<div class="options__text">
+												Заказ поступит в работу после оплаты счета
+											</div>
+										</div>
+										<div class="options__column">
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="2" name="option">
+												<span class="options__label">
+													Отсрочка
+												</span>
+											</label>
+											<div class="options__text">
+												Заказ будет выполнен без привязки к оплате
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__column">
+								<div class="form__title">Комментарий к заказу</div>
+								<div class="form__body">
+									<div class="form__inputs">
+										<textarea placeholder=""></textarea>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn">Заказать</button>
+						</form>
+					</div>
+				</div>
+
+			</main>
+		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/inputmask.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/dynamic_adapt.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+
+</html>

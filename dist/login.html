@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<title>Вход</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/fancybox.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+	</head>
+
+	<body class="preload mp">
+		<div class="main-wrapper-outer">
+			<main class="main main-login">
+
+				<div class="block-login">
+					<div class="container">
+						<div class="block-login__content">
+							<form action="#" class="block-login__form">
+								<a href="./" class="block-login__logo">
+									<img src="img/icons/logo1.svg" alt="">
+								</a>
+								<div class="block-login__top">
+									<div class="block-login__inputs">
+										<div class="block-login__input">
+											<label for="login1">Login</label>
+											<input id="login1" data-required autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="">
+										</div>
+										<div class="block-login__input">
+											<label for="password1">Пароль</label>
+											<input id="password1" data-required autocomplete="off" type="password" name="form[]" data-error="Обязательное поле" placeholder="">
+										</div>
+									</div>
+									<a href="./" data-popup="#forgot-password" class="block-login__password">Забыл
+										пароль</a>
+								</div>
+								<button type="submit" class="btn">Войти</button>
+							</form>
+							<div class="block-login__text">
+								Для получения доступа необходимо написать запрос в свободной форме на почту
+								<a href="mailto:merida.info@mail.ru">merida.info@mail.ru</a>.
+								<br>
+								Подробная информация по телефону (мессенджер) <a href="tel:79372174657">+ 7 937
+									217-46-57</a> в будние дни с 8 до 17 часов
+								мск.
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</main>
+		</div>
+		<div id="forgot-password" aria-hidden="true" class="popup popup-forgot-password">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div data-close class="popup__close">
+						<img loading="lazy" src="img/icons/close.svg" alt="">
+					</div>
+					<form action="#" class="block-login__form">
+						<div class="block-login__text">
+							Укажите Ваш логин или email. Мы отправим на вашу почту пароль от аккаунта.
+						</div>
+						<div class="block-login__top">
+							<div class="block-login__inputs">
+								<div class="block-login__input">
+									<input id="login1" data-required autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="">
+								</div>
+							</div>
+						</div>
+						<div class="block-login__buttons">
+							<button type="submit" class="btn">Отправить</button>
+							<button data-close type="button" class="btn">Отмена</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/inputmask.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/dynamic_adapt.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+
+</html>
