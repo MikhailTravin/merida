@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Профиль компании</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Главная
+                                <img src="img/icons/arrow1.svg" alt="">
+                            </a>
+                        </li>
+                        <li><span>Профиль компании</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="block-profile">
+                <div class="container">
+                    <form action="#" class="form">
+                        <div class="form__column">
+                            <div class="form__title">
+                                ПРОфиль компании
+                            </div>
+                            <div class="form__body">
+                                <div class="form__inputs disabled">
+                                    <div class="form__input">
+                                        <label for="select1">Заказчик (юридическое лицо)</label>
+                                        <select id="select1" name="form[]" class="select">
+                                            <option value="" data-show data-label selected>ООО “Тамбов-авто-сити”
+                                            </option>
+                                            <option value="1">Пункт №1</option>
+                                            <option value="2">Пункт №2</option>
+                                            <option value="3">Пункт №3</option>
+                                            <option value="4">Пункт №4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form__inputs disabled">
+                                    <div class="form__input">
+                                        <label for="inn">ИНН</label>
+                                        <input id="inn" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="2334265756">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="kpp">КПП</label>
+                                        <input id="kpp" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="8768672534509">
+                                    </div>
+                                </div>
+                                <div class="form__inputs disabled">
+                                    <div class="form__input">
+                                        <label for="dogovor">Договор</label>
+                                        <input id="dogovor" disabled autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="ыыы1242701-1243124">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="primechaniye">Примечание</label>
+                                        <input id="primechaniye" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="Тамбов">
+                                    </div>
+                                </div>
+                                <div class="form__inputs add-form">
+                                    <div class="form__input">
+                                        <label for="form_1">Адрес для доставки</label>
+                                        <input id="form_1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-max-form="3" class="add-form-button">
+                                <img src="img/icons/add-plus.svg" alt="">
+                                <span>Добавить адрес</span>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__title">
+                                Маркетолог
+                            </div>
+                            <div class="form__body add-form">
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="form_2">
+                                            ФИО
+                                        </label>
+                                        <input id="form_2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="form_3">Телефон</label>
+                                        <input id="form_3" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="+7 (927) 555-55-55"
+                                            class="telephone">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="form_4">Почта</label>
+                                        <input id="form_4" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-max-form="3" class="add-form-button">
+                                <img src="img/icons/add-plus.svg" alt="">
+                                <span>Добавить маркетолога</span>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__title">
+                                Контактное лицо <span>(получатель продукции)</span>
+                            </div>
+                            <div class="form__body add-form">
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="form_5">
+                                            ФИО
+                                        </label>
+                                        <input id="form_5" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="form_6">Телефон</label>
+                                        <input id="form_6" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="+7 (927) 555-55-55"
+                                            class="telephone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-max-form="3" class="add-form-button">
+                                <img src="img/icons/add-plus.svg" alt="">
+                                <span>Добавить контактное лицо</span>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__title">
+                                Информация для макетов
+                            </div>
+                            <div class="form__body">
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="name1">
+                                            Торговое название
+                                        </label>
+                                        <input id="name1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="(Только заглавными)">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="site1">
+                                            Сайт
+                                        </label>
+                                        <input id="site1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="tel1">
+                                            Телефон автосалона
+                                        </label>
+                                        <input id="tel1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="(Только заглавными)">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="tel2">
+                                            Телефон сервиса
+                                        </label>
+                                        <input id="tel2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="address2">
+                                            Адрес
+                                        </label>
+                                        <input id="address2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__title">
+                                Информация для макетов
+                            </div>
+                            <div class="form__body">
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="name1">
+                                            Торговое название
+                                        </label>
+                                        <input id="name1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="(Только заглавными)">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="site1">
+                                            Сайт
+                                        </label>
+                                        <input id="site1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="tel1">
+                                            Телефон автосалона
+                                        </label>
+                                        <input id="tel1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="(Только заглавными)">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="tel2">
+                                            Телефон сервиса
+                                        </label>
+                                        <input id="tel2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="address2">
+                                            Адрес
+                                        </label>
+                                        <input id="address2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__title">
+                                Прочие настройки
+                            </div>
+                            <div class="form__body">
+                                <div class="form__checkboxes">
+                                    <label class="checkbox">
+                                        <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                            name="form[]">
+                                        <span class="checkbox__label">
+                                            <span class="checkbox__icon">
+                                                <img src="img/icons/check1.svg" alt="">
+                                            </span>
+                                            <span class="checkbox__text">Включать доставку в стоимость товаров</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="2"
+                                            name="form[]">
+                                        <span class="checkbox__label">
+                                            <span class="checkbox__icon">
+                                                <img src="img/icons/check1.svg" alt="">
+                                            </span>
+                                            <span class="checkbox__text">Изготовление заказов строго после оплаты</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="3"
+                                            name="form[]">
+                                        <span class="checkbox__label">
+                                            <span class="checkbox__icon">
+                                                <img src="img/icons/check1.svg" alt="">
+                                            </span>
+                                            <span class="checkbox__text">Получать уведомления на почту о появлении
+                                                обязательных POS-материалов</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="4"
+                                            name="form[]">
+                                        <span class="checkbox__label">
+                                            <span class="checkbox__icon">
+                                                <img src="img/icons/check1.svg" alt="">
+                                            </span>
+                                            <span class="checkbox__text">Управление несколькими профилями</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="id1">
+                                            ID ЭДО
+                                        </label>
+                                        <input id="id1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="id2">
+                                            ID честного знака
+                                        </label>
+                                        <input id="id2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="login1">
+                                            Логин
+                                        </label>
+                                        <input id="login1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="password1">
+                                            Пароль
+                                        </label>
+                                        <input id="password1" autocomplete="off" type="password" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__title">
+                                Запросить акт сверки по эдо
+                            </div>
+                            <div class="form__body">
+                                <div class="form-calendar">
+                                    <div class="form-calendar__input">
+                                        <div class="form-calendar__label">
+                                            С
+                                        </div>
+                                        <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                            placeholder="" class="data">
+                                        <img src="img/icons/calendar.svg" alt="">
+                                    </div>
+                                    <div class="form-calendar__input">
+                                        <div class="form-calendar__label">
+                                            По
+                                        </div>
+                                        <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                            placeholder="" class="data">
+                                        <img src="img/icons/calendar.svg" alt="">
+                                    </div>
+                                    <button type="button" class="btn">Отправить запрос</button>
+                                </div>
+                            </div>
+                            <label class="checkbox">
+                                <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="5"
+                                    name="form[]">
+                                <span class="checkbox__label">
+                                    <span class="checkbox__icon">
+                                        <img src="img/icons/check1.svg" alt="">
+                                    </span>
+                                    <span class="checkbox__text">Согласие на обработку персональных данных</span>
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

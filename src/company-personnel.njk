@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Персонал компании</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Главная
+                                <img src="img/icons/arrow1.svg" alt="">
+                            </a>
+                        </li>
+                        <li><span>Персонал компании</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="block-profile">
+                <div class="container">
+                    <form action="#" class="form">
+                        <div class="form__column">
+                            <div class="form__title">
+                                Персонал компании
+                            </div>
+                            <div class="form__body add-form">
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <label for="form_1">
+                                            ФИО
+                                        </label>
+                                        <input id="form_1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательно поле" placeholder="">
+                                    </div>
+                                </div>
+                                <div data-spollers class="spollers">
+                                    <div class="spollers__item">
+                                        <button type="button" data-spoller class="spollers__title">
+                                            <span>Персональные данные</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </button>
+                                        <div class="spollers__body">
+                                            <div class="form__inputs">
+                                                <div class="form__input">
+                                                    <label for="form_1">Телефон</label>
+                                                    <input id="form_1" autocomplete="off" type="text" name="form[]"
+                                                        data-error="Обязательно поле" placeholder="+7 (927) 555-55-55"
+                                                        class="telephone">
+                                                </div>
+                                                <div class="form__input">
+                                                    <label for="form_2">Почта</label>
+                                                    <input id="form_2" autocomplete="off" type="text" name="form[]"
+                                                        data-error="Обязательно поле" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-max-form="3" class="add-form-button">
+                                <img src="img/icons/add-plus.svg" alt="">
+                                <span>Добавить сотрудника</span>
+                            </div>
+                        </div>
+                        <label class="checkbox">
+                            <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
+                            <span class="checkbox__label">
+                                <span class="checkbox__icon">
+                                    <img src="img/icons/check1.svg" alt="">
+                                </span>
+                                <span class="checkbox__text">Согласие на обработку персональных данных</span>
+                            </span>
+                        </label>
+                        <button type="submit" class="btn">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

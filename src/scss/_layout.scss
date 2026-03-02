@@ -1,0 +1,39 @@
+.main-wrapper-outer {
+  width: 100%;
+  min-height: 100%;
+  max-width: var(--main-outer-width);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 186px 0px 0px 0px;
+  @media (max-width: 992px) {
+    padding: 164px 0px 0px 0px;
+  }
+  @media (max-width: 768px) {
+    padding: 111px 0px 0px 0px;
+    margin: 0px 0px 56px 0px;
+  }
+  &.main-login {
+    padding: 0px 0px 0px 0px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0px 37px;
+  @media (max-width: 768px) {
+    padding: 0px 15px;
+  }
+}

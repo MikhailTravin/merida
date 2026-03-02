@@ -1,0 +1,124 @@
+body {
+  color: var(--osnovnoy-tekst);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  &.hide-scrollbar {
+    margin: 0px 0px 0px 0px !important;
+  }
+  .lock & {
+    overflow: hidden;
+  }
+  .menu-open & {
+    overflow: hidden;
+    &::before {
+      content: "";
+      cursor: pointer;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 97;
+      background-color: rgba(8, 30, 22, 0.25);
+    }
+  }
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+fieldset,
+fieldset legend {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  outline: none;
+  color: currentcolor;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--osnovnoy-belyy);
+  border-radius: 6px;
+  padding: 8px 15px;
+  min-height: 44px;
+  background-color: var(--osnovnoy-siniy);
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--osnovnoy-pri-navedenii);
+  }
+}
+
+.breadcrumbs {
+  position: relative;
+  z-index: 10;
+  padding: 22px 0px;
+  ul {
+    padding: 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--vtorostepennye-elementy);
+    gap: 11px;
+    img {
+      margin: 0px 0px 0px 2px;
+      width: 8px;
+      height: 13px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition:
+        color 0.3s,
+        opacity 0.3s;
+      &:hover {
+        color: var(--osnovnoy-tekst);
+      }
+    }
+    span {
+      pointer-events: none;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--osnovnoy-tekst);
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 442px;
+  @media (max-width: 992px) {
+    height: 428px;
+  }
+  @media (max-width: 768px) {
+    height: 202px;
+  }
+}
