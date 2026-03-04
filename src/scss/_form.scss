@@ -96,6 +96,10 @@
     }
     // .select__label
     &__label {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     // .select__value
     &__value {
@@ -179,6 +183,15 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        .options__text {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        &.checked {
+            .options__text {
+                opacity: 1;
+            }
+        }
     }
     // .options__item
     &__item {
