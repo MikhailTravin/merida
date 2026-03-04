@@ -1759,3 +1759,98 @@ document.addEventListener('DOMContentLoaded', function () {
     initFilePreview();
   }
 });
+
+//========================================================================================================================================================
+
+const copyButtons = document.querySelectorAll('.block-orders-info1__copy');
+
+if (copyButtons) {
+  copyButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const parentBlock = this.closest('.block-orders-info1__number');
+      const numberSpan = parentBlock.querySelector('span');
+      const textToCopy = numberSpan.textContent.trim();
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+
+        this.classList.add('copied');
+        setTimeout(() => {
+          this.classList.remove('copied');
+        }, 500);
+      }).catch(err => {
+        console.error('Ошибка копирования:', err);
+      });
+    });
+  });
+}
+
+//========================================================================================================================================================
+
+const orderActions = document.querySelectorAll('.order-actions');
+
+if (orderActions) {
+  orderActions.forEach(actions => {
+    const button = actions.querySelector('.order-actions__button');
+
+    if (button) {
+      button.addEventListener('click', function (event) {
+        event.stopPropagation();
+
+        const isActive = actions.classList.contains('active');
+
+        orderActions.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        if (!isActive) {
+          actions.classList.add('active');
+        }
+      });
+    }
+  });
+
+  document.addEventListener('click', function (event) {
+    const activeBlock = document.querySelector('.order-actions.active');
+    if (activeBlock && !activeBlock.contains(event.target)) {
+      activeBlock.classList.remove('active');
+    }
+  });
+}
+
+//========================================================================================================================================================
+
+const detailButtons = document.querySelectorAll('.order-details');
+
+if (detailButtons.length > 0) {
+  detailButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const currentColumn = this.closest('.block-orders__column');
+
+      const cartTables = currentColumn.querySelector('.cart-tables');
+
+      if (!cartTables) return;
+
+      const isActive = currentColumn.classList.contains('active');
+
+      const duration = 500;
+
+      if (isActive) {
+        _slideUp(cartTables, duration);
+        currentColumn.classList.remove('active');
+      } else {
+        document.querySelectorAll('.block-orders__column.active').forEach(column => {
+          const otherCartTables = column.querySelector('.cart-tables');
+          if (otherCartTables) {
+            _slideUp(otherCartTables, duration);
+          }
+          column.classList.remove('active');
+        });
+
+        _slideDown(cartTables, duration);
+        currentColumn.classList.add('active');
+      }
+    });
+  });
+}
