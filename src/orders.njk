@@ -25,7 +25,2401 @@
                 </div>
             </div>
 
+            <div class="block-orders">
+                <div class="container">
+                    <div class="block-orders-top">
+                        <div class="block-orders-top__body">
+                            <div class="block-orders-top__search">
+                                <button type="button" class="block-orders-top__button">
+                                    <img src="img/icons/search2.svg" alt="">
+                                </button>
+                                <div class="block-orders-top__input">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="Номер заказа">
+                                </div>
+
+                            </div>
+                            <div class="block-orders-top__menu">
+                                <div data-filter="all" class="block-orders-top__title active">Все</div>
+                                <div data-filter="agreed" class="block-orders-top__title">На согласовании</div>
+                                <div data-filter="sent" class="block-orders-top__title">Отправлен</div>
+                                <div data-filter="not-paid" class="block-orders-top__title">Не оплачен</div>
+                            </div>
+                        </div>
+                        <div class="block-orders-top__warning">
+                            <img src="img/icons/warning.svg" alt="">
+                            <span>Просьба погасить задолженность</span>
+                        </div>
+                    </div>
+                    <div class="block-orders__content">
+                        <div class="block-orders__column">
+                            <div class="block-orders__info">
+                                <div class="block-orders-info1">
+                                    <div class="block-orders-info1__left">
+                                        <div class="block-orders-info1__titles">
+                                            <div class="block-orders-info1__title">
+                                                <div class="block-orders-info1__number">
+                                                    <span>С121233</span>
+                                                    <div class="block-orders-info1__copy">
+                                                        <img src="img/icons/files.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="block-orders-info1__data">06.02.2026 09:09</div>
+                                            </div>
+                                            <div class="order-status">
+                                                <div class="order-status__squares">
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                </div>
+                                                <div class="order-status__content">
+                                                    <div class="order-status__title">
+                                                        Статус: <span class="order-status-orange">На согласовании</span>
+                                                    </div>
+                                                    <div class="order-status__subtitle order-status-orange">
+                                                        Аннулируется через 3 дня!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-orders-info1__price">
+                                            46 082 ₽
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <div class="order-actions__button">
+                                            <span>Действия с заказом</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </div>
+                                        <div class="order-actions__dropdowm">
+                                            <ul>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/download.svg" alt="">
+                                                            <span>Скачать счёт</span>
+                                                        </div>
+                                                        <div class="order-actions__icon"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./" data-popup="#invoice-email">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/sign.svg" alt="">
+                                                            <span>Счёт на e-mail</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/layers.svg" alt="">
+                                                            <span>Объединить заказы</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/clock.svg" alt="">
+                                                            <span>Продлить резерв (7 дн.)</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/anotation.svg" alt="">
+                                                            <span>Претензия</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/refresh.svg" alt="">
+                                                            <span>Повторить заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name order-actions-red">
+                                                            <img src="img/icons/close3.svg" alt="">
+                                                            <span>Аннулировать заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info2">
+                                    <ul>
+                                        <li class="block-orders-red">
+                                            <img src="img/icons/warning2.svg" alt="">
+                                            <span>Не оплачен</span>
+                                        </li>
+                                        <li>
+                                            <a href="./" data-popup="#order-info">
+                                                <img src="img/icons/info.svg" alt="">
+                                                <span>Информация о заказе</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="./" data-popup="#send-production"
+                                        class="block-orders-info3__button disabled">Отдать
+                                        в производство</a>
+                                    <div class="order-details">
+                                        <span>Детали заказа </span>
+                                        <img src="img/icons/arrow2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="block-orders-photo">
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image7.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                        <span>+2 шт</span>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info3">
+                                    <div class="block-orders-info3__price">
+                                        46 082 ₽
+                                    </div>
+                                    <a href="./" data-popup="#send-production"
+                                        class="block-orders-info3__button disabled">Отдать
+                                        в производство</a>
+                                </div>
+                            </div>
+                            <div hidden class="cart-tables">
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image2.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Визитная карточка
+                                            <span>Односторонняя, XL</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <a href="./" class="cart-tables__apps">
+                                            <img src="img/icons/apps.svg" alt="">
+                                        </a>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="96">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                5 600 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span class="red">Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image7.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Комплект мобильного флага
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                10 600 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Travel (1.8)
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image border">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Legend
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image3.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Пакет “Пилон”
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="500">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                23 294 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts2" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span>Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-orders__column">
+                            <div class="block-orders__info">
+                                <div class="block-orders-info1">
+                                    <div class="block-orders-info1__left">
+                                        <div class="block-orders-info1__titles">
+                                            <div class="block-orders-info1__title">
+                                                <div class="block-orders-info1__number">
+                                                    <span>С121233</span>
+                                                    <div class="block-orders-info1__copy">
+                                                        <img src="img/icons/files.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="block-orders-info1__data">06.02.2026 09:09</div>
+                                            </div>
+                                            <div class="order-status">
+                                                <div class="order-status__squares">
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                </div>
+                                                <div class="order-status__content">
+                                                    <div class="order-status__title">
+                                                        Статус: <span class="order-status-orange">На согласовании</span>
+                                                    </div>
+                                                    <div class="order-status__subtitle order-status-orange">
+                                                        Аннулируется через 3 дня!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-orders-info1__price">
+                                            46 082 ₽
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <div class="order-actions__button">
+                                            <span>Действия с заказом</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </div>
+                                        <div class="order-actions__dropdowm">
+                                            <ul>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/download.svg" alt="">
+                                                            <span>Скачать счёт</span>
+                                                        </div>
+                                                        <div class="order-actions__icon"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./" data-popup="#invoice-email">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/sign.svg" alt="">
+                                                            <span>Счёт на e-mail</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/layers.svg" alt="">
+                                                            <span>Объединить заказы</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/clock.svg" alt="">
+                                                            <span>Продлить резерв (7 дн.)</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/anotation.svg" alt="">
+                                                            <span>Претензия</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/refresh.svg" alt="">
+                                                            <span>Повторить заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name order-actions-red">
+                                                            <img src="img/icons/close3.svg" alt="">
+                                                            <span>Аннулировать заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info2">
+                                    <ul>
+                                        <li class="block-orders-red">
+                                            <img src="img/icons/warning2.svg" alt="">
+                                            <span>Не оплачен</span>
+                                        </li>
+                                        <li>
+                                            <a href="./" data-popup="#order-info">
+                                                <img src="img/icons/info.svg" alt="">
+                                                <span>Информация о заказе</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="./" data-popup="#send-production" class="block-orders-info3__button">Отдать
+                                        в производство</a>
+                                    <div class="order-details">
+                                        <span>Детали заказа </span>
+                                        <img src="img/icons/arrow2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="block-orders-photo">
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image7.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                        <span>+2 шт</span>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info3">
+                                    <div class="block-orders-info3__price">
+                                        46 082 ₽
+                                    </div>
+                                    <a href="./" data-popup="#send-production" class="block-orders-info3__button">Отдать
+                                        в производство</a>
+                                </div>
+                            </div>
+                            <div hidden class="cart-tables">
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image2.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Визитная карточка
+                                            <span>Односторонняя, XL</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <a href="./" class="cart-tables__apps">
+                                            <img src="img/icons/apps.svg" alt="">
+                                        </a>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="96">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                5 600 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span class="red">Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image7.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Комплект мобильного флага
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                10 600 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Travel (1.8)
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image border">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Legend
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image3.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Пакет “Пилон”
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="500">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                23 294 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts2" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span>Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-orders__column">
+                            <div class="block-orders__info">
+                                <div class="block-orders-info1">
+                                    <div class="block-orders-info1__left">
+                                        <div class="block-orders-info1__titles">
+                                            <div class="block-orders-info1__title">
+                                                <div class="block-orders-info1__number">
+                                                    <span>С121233</span>
+                                                    <div class="block-orders-info1__copy">
+                                                        <img src="img/icons/files.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="block-orders-info1__data">06.02.2026 09:09</div>
+                                            </div>
+                                            <div class="order-status">
+                                                <div class="order-status__squares">
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                </div>
+                                                <div class="order-status__content">
+                                                    <div class="order-status__title">
+                                                        Статус: <span class="order-status-orange">В производстве</span>
+                                                    </div>
+                                                    <div class="order-status__subtitle">
+                                                        Отгрузка: 08.02.2026
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-orders-info1__price">
+                                            46 082 ₽
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <div class="order-actions__button">
+                                            <span>Действия с заказом</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </div>
+                                        <div class="order-actions__dropdowm">
+                                            <ul>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/download.svg" alt="">
+                                                            <span>Скачать счёт</span>
+                                                        </div>
+                                                        <div class="order-actions__icon"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./" data-popup="#invoice-email">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/sign.svg" alt="">
+                                                            <span>Счёт на e-mail</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/layers.svg" alt="">
+                                                            <span>Объединить заказы</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/clock.svg" alt="">
+                                                            <span>Продлить резерв (7 дн.)</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/anotation.svg" alt="">
+                                                            <span>Претензия</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/refresh.svg" alt="">
+                                                            <span>Повторить заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name order-actions-red">
+                                                            <img src="img/icons/close3.svg" alt="">
+                                                            <span>Аннулировать заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info2">
+                                    <ul>
+                                        <li class="block-orders-orange">
+                                            <img src="img/icons/check2.svg" alt="">
+                                            <span>Оплачен</span>
+                                        </li>
+                                        <li>
+                                            <a href="./" data-popup="#order-info">
+                                                <img src="img/icons/info.svg" alt="">
+                                                <span>Информация о заказе</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="order-details">
+                                        <span>Детали заказа </span>
+                                        <img src="img/icons/arrow2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="block-orders-photo">
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image7.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                        <span>+2 шт</span>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info3">
+                                    <div class="block-orders-info3__price">
+                                        46 082 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div hidden class="cart-tables">
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image2.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Визитная карточка
+                                            <span>Односторонняя, XL</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <a href="./" class="cart-tables__apps">
+                                            <img src="img/icons/apps.svg" alt="">
+                                        </a>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="96">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                5 600 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span class="red">Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image7.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Комплект мобильного флага
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                10 600 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Travel (1.8)
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image border">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Legend
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image3.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Пакет “Пилон”
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="500">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                23 294 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts2" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span>Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-orders__column">
+                            <div class="block-orders__info">
+                                <div class="block-orders-info1">
+                                    <div class="block-orders-info1__left">
+                                        <div class="block-orders-info1__titles">
+                                            <div class="block-orders-info1__title">
+                                                <div class="block-orders-info1__number">
+                                                    <span>С121233</span>
+                                                    <div class="block-orders-info1__copy">
+                                                        <img src="img/icons/files.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="block-orders-info1__data">06.02.2026 09:09</div>
+                                            </div>
+                                            <div class="order-status">
+                                                <div class="order-status__squares">
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square"></div>
+                                                </div>
+                                                <div class="order-status__content">
+                                                    <div class="order-status__title">
+                                                        Статус: <span class="order-status-green">В отгрузке</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-orders-info1__price">
+                                            46 082 ₽
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <div class="order-actions__button">
+                                            <span>Действия с заказом</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </div>
+                                        <div class="order-actions__dropdowm">
+                                            <ul>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/download.svg" alt="">
+                                                            <span>Скачать счёт</span>
+                                                        </div>
+                                                        <div class="order-actions__icon"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./" data-popup="#invoice-email">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/sign.svg" alt="">
+                                                            <span>Счёт на e-mail</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/layers.svg" alt="">
+                                                            <span>Объединить заказы</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/clock.svg" alt="">
+                                                            <span>Продлить резерв (7 дн.)</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/anotation.svg" alt="">
+                                                            <span>Претензия</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/refresh.svg" alt="">
+                                                            <span>Повторить заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name order-actions-red">
+                                                            <img src="img/icons/close3.svg" alt="">
+                                                            <span>Аннулировать заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info2">
+                                    <ul>
+                                        <li class="block-orders-orange">
+                                            <img src="img/icons/check2.svg" alt="">
+                                            <span>Оплачен</span>
+                                        </li>
+                                        <li>
+                                            <a href="./" data-popup="#order-info">
+                                                <img src="img/icons/info.svg" alt="">
+                                                <span>Информация о заказе</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="order-details">
+                                        <span>Детали заказа </span>
+                                        <img src="img/icons/arrow2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="block-orders-photo">
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image7.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                        <span>+2 шт</span>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info3">
+                                    <div class="block-orders-info3__price">
+                                        46 082 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div hidden class="cart-tables">
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image2.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Визитная карточка
+                                            <span>Односторонняя, XL</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <a href="./" class="cart-tables__apps">
+                                            <img src="img/icons/apps.svg" alt="">
+                                        </a>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="96">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                5 600 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span class="red">Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image7.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Комплект мобильного флага
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                10 600 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Travel (1.8)
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image border">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Legend
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image3.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Пакет “Пилон”
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="500">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                23 294 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts2" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span>Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-orders__column">
+                            <div class="block-orders__info">
+                                <div class="block-orders-info1">
+                                    <div class="block-orders-info1__left">
+                                        <div class="block-orders-info1__titles">
+                                            <div class="block-orders-info1__title">
+                                                <div class="block-orders-info1__number">
+                                                    <span>С121233</span>
+                                                    <div class="block-orders-info1__copy">
+                                                        <img src="img/icons/files.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="block-orders-info1__data">06.02.2026 09:09</div>
+                                            </div>
+                                            <div class="order-status">
+                                                <div class="order-status__squares">
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                    <div class="order-status__square active"></div>
+                                                </div>
+                                                <div class="order-status__content">
+                                                    <div class="order-status__title">
+                                                        Статус: <span class="order-status-green">Отправлен</span>
+                                                    </div>
+                                                    <div class="order-status__subtitle">
+                                                        Претензия
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-orders-info1__price">
+                                            46 082 ₽
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <div class="order-actions__button">
+                                            <span>Действия с заказом</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </div>
+                                        <div class="order-actions__dropdowm">
+                                            <ul>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/download.svg" alt="">
+                                                            <span>Скачать счёт</span>
+                                                        </div>
+                                                        <div class="order-actions__icon"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./" data-popup="#invoice-email">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/sign.svg" alt="">
+                                                            <span>Счёт на e-mail</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/layers.svg" alt="">
+                                                            <span>Объединить заказы</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/clock.svg" alt="">
+                                                            <span>Продлить резерв (7 дн.)</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/anotation.svg" alt="">
+                                                            <span>Претензия</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/refresh.svg" alt="">
+                                                            <span>Повторить заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name order-actions-red">
+                                                            <img src="img/icons/close3.svg" alt="">
+                                                            <span>Аннулировать заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info2">
+                                    <ul>
+                                        <li class="block-orders-orange">
+                                            <img src="img/icons/check2.svg" alt="">
+                                            <span>Оплачен</span>
+                                        </li>
+                                        <li>
+                                            <a href="./" data-popup="#order-info">
+                                                <img src="img/icons/info.svg" alt="">
+                                                <span>Информация о заказе</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="order-details">
+                                        <span>Детали заказа </span>
+                                        <img src="img/icons/arrow2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="block-orders-photo">
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image7.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-orders-photo__image">
+                                        <img src="img/services/image5.webp" alt="">
+                                        <span>+2 шт</span>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info3">
+                                    <div class="block-orders-info3__price">
+                                        46 082 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div hidden class="cart-tables">
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image2.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Визитная карточка
+                                            <span>Односторонняя, XL</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <a href="./" class="cart-tables__apps">
+                                            <img src="img/icons/apps.svg" alt="">
+                                        </a>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="96">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                5 600 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span class="red">Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image7.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Комплект мобильного флага
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                10 600 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Travel (1.8)
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image border">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Legend
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image3.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Пакет “Пилон”
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="500">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                23 294 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts2" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span>Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-orders__column">
+                            <div class="block-orders__info">
+                                <div class="block-orders-info1">
+                                    <div class="block-orders-info1__left">
+                                        <div class="block-orders-info1__titles">
+                                            <div class="block-orders-info1__title">
+                                                <div class="block-orders-info1__number">
+                                                    <span>С121233</span>
+                                                    <div class="block-orders-info1__copy">
+                                                        <img src="img/icons/files.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="block-orders-info1__data">06.02.2026 09:09</div>
+                                            </div>
+                                            <div class="order-status">
+                                                <div class="order-status__squares">
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                    <div class="order-status__square"></div>
+                                                </div>
+                                                <div class="order-status__content">
+                                                    <div class="order-status__title">
+                                                        Статус: <span>Аннулирован</span>
+                                                    </div>
+                                                    <div class="order-status__subtitle">
+                                                        Претензия
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-orders-info1__price">
+                                            46 082 ₽
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <div class="order-actions__button">
+                                            <span>Действия с заказом</span>
+                                            <img src="img/icons/arrow2.svg" alt="">
+                                        </div>
+                                        <div class="order-actions__dropdowm">
+                                            <ul>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/download.svg" alt="">
+                                                            <span>Скачать счёт</span>
+                                                        </div>
+                                                        <div class="order-actions__icon"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./" data-popup="#invoice-email">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/sign.svg" alt="">
+                                                            <span>Счёт на e-mail</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/layers.svg" alt="">
+                                                            <span>Объединить заказы</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/clock.svg" alt="">
+                                                            <span>Продлить резерв (7 дн.)</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/anotation.svg" alt="">
+                                                            <span>Претензия</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name">
+                                                            <img src="img/icons/refresh.svg" alt="">
+                                                            <span>Повторить заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">
+                                                        <div class="order-actions__name order-actions-red">
+                                                            <img src="img/icons/close3.svg" alt="">
+                                                            <span>Аннулировать заказ</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-orders-info2">
+                                    <ul>
+                                        <li class="block-orders-grey">
+                                            <img src="img/icons/warning3.svg" alt="">
+                                            <span>Не оплачен</span>
+                                        </li>
+                                        <li>
+                                            <a href="./" data-popup="#order-info">
+                                                <img src="img/icons/info.svg" alt="">
+                                                <span>Информация о заказе</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="order-details">
+                                        <span>Детали заказа </span>
+                                        <img src="img/icons/arrow2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="block-orders-photo">
+                                </div>
+                                <div class="block-orders-info3">
+                                    <div class="block-orders-info3__price">
+                                        46 082 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div hidden class="cart-tables">
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image2.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Визитная карточка
+                                            <span>Односторонняя, XL</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <a href="./" class="cart-tables__apps">
+                                            <img src="img/icons/apps.svg" alt="">
+                                        </a>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="96">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                5 600 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span class="red">Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image7.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Комплект мобильного флага
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                10 600 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Travel (1.8)
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image border">
+                                            <img src="img/services/image1.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Оформление автомобиля NIVA Legend
+                                            <span>Тест-драйв, Standart (обычный), цвет белый</span>
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus disabled">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value disabled autocomplete="off" type="text"
+                                                        name="form[]" value="1">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus disabled">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                3 294 ₽
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__layout">
+                                        </div>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-tables__table">
+                                    <a href="./" class="cart-tables__left">
+                                        <div class="cart-tables__image">
+                                            <img src="img/services/image3.webp" alt="">
+                                        </div>
+                                        <div class="cart-tables__name">
+                                            Пакет “Пилон”
+                                        </div>
+                                    </a>
+                                    <div class="cart-tables__right">
+                                        <div class="cart-tables__apps">
+                                        </div>
+                                        <div class="cart-tables__quantity">
+                                            <div data-quantity class="quantity">
+                                                <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                    <img src="img/icons/minus.svg" alt="">
+                                                </button>
+                                                <div class="quantity__input">
+                                                    <input data-quantity-value autocomplete="off" type="text"
+                                                        name="form[]" value="500">
+                                                </div>
+                                                <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                    <img src="img/icons/plus.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-tables__prices">
+                                            <div class="cart-tables__price">
+                                                23 294 ₽
+                                                <span>скидка 10%</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" data-popup="#approval-layouts2" class="cart-tables__layout">
+                                            <img src="img/icons/area.svg" alt="">
+                                            <span>Утвердите макет</span>
+                                        </a>
+                                        <div class="cart-tables__close">
+                                            <button type="button">
+                                                <img src="img/icons/close2.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="pagination__item_nav pagination__item_nav-prev" href="./">
+                            <img src="img/icons/arrow2.svg" alt="">
+                        </span>
+                        <a class="pagination__item pagination__item_active" href="./">1</a>
+                        <a class="pagination__item" href="./">2</a>
+                        <a class="pagination__item pagination__item_ellipsis" href="./">...</a>
+                        <a class="pagination__item" href="./">3</a>
+                        <a class="pagination__item" href="./">4</a>
+                        <a class="pagination__item_nav pagination__item_nav-next" href="./">
+                            <img src="img/icons/arrow2.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </main>
+    </div>
+    <div id="send-production" aria-hidden="true" class="popup popup-send-production">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div data-close class="popup__close">
+                    <img loading="lazy" src="img/icons/close.svg" alt="">
+                </div>
+                <div class="popup-send-production__body">
+                    <div class="popup-send-production__text">
+                        Отдавая заказ в производство, Вы соглашаетесь со всеми параметрами заказа и утверждаете счет.
+                        После направления заказа в производство его невозможно будет отменить.
+                    </div>
+                    <div class="popup-send-production__buttons">
+                        <button type="button" class="btn">Согласен</button>
+                        <button data-close type="button" class="btn">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="invoice-email" aria-hidden="true" class="popup popup-invoice-email">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div data-close class="popup__close">
+                    <img loading="lazy" src="img/icons/close.svg" alt="">
+                </div>
+                <div class="popup-invoice-email__body">
+                    <div class="popup-invoice-email__text">
+                        Отправить счет на e-mail: a.markova@lada-avtoexpress.ru
+                    </div>
+                    <div class="popup-invoice-email__buttons">
+                        <button type="button" class="btn">Согласен</button>
+                        <button data-close type="button" class="btn">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="order-info" aria-hidden="true" class="popup popup-order-info">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div data-close class="popup__close">
+                    <img loading="lazy" src="img/icons/close.svg" alt="">
+                </div>
+                <div class="popup-order-info__body">
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Маркетолог</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                Гульшат Апельсиновна Кокорина
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Способ оплаты</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                Отсрочка
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Получатель заказа</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                Гульшат Апельсиновна Кокорина
+                            </p>
+                            <p>8 (999) 000-00-00</p>
+                        </div>
+                    </div>
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Доставка</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                Курьерская
+                                <br>
+                                356230, Ставропольский край,<br> г.Ставрополь, ул.Южный Обход, 57/2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Стоимость доставки</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                400 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Трек-номер</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                2601111006034 <a href="./">Отследить</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-order-info__column">
+                        <div class="popup-order-info__title">Срок доставки</div>
+                        <div class="popup-order-info__text">
+                            <p>
+                                до 30.03.26 включительно
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="approval-layouts1" aria-hidden="true" class="popup popup-approval-layouts">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div data-close class="popup__close">
+                    <img loading="lazy" src="img/icons/close.svg" alt="">
+                </div>
+                <div class="popup-approval-layouts__body">
+                    <div class="popup-approval-layouts__image">
+                        <img src="img/services/image5.webp" alt="">
+                    </div>
+                    <form action="#" class="popup-approval-layouts__form">
+                        <div data-spollers class="popup-approval-layouts__inputs">
+                            <div data-spoller class="popup-approval-layouts__button">
+                                <span>Не утвержден</span>
+                                <img src="img/icons/arrow2.svg" alt="">
+                            </div>
+                            <div class="popup-approval-layouts__input">
+                                <label for="textarea1">Правки к макету</label>
+                                <textarea id="textarea1"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">Ок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="approval-layouts2" aria-hidden="true" class="popup popup-approval-layouts">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div data-close class="popup__close">
+                    <img loading="lazy" src="img/icons/close.svg" alt="">
+                </div>
+                <div class="popup-approval-layouts__body">
+                    <div class="popup-approval-layouts__image">
+                        <img src="img/services/image5.webp" alt="">
+                    </div>
+                    <form action="#" class="popup-approval-layouts__form">
+                        <div data-spollers class="popup-approval-layouts__inputs disabled">
+                            <div data-spoller class="popup-approval-layouts__button">
+                                <span>Утвержден</span>
+                                <img src="img/icons/arrow2.svg" alt="">
+                            </div>
+                            <div class="popup-approval-layouts__input">
+                                <label for="textarea1">Правки к макету</label>
+                                <textarea id="textarea1"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">Ок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     {% include 'blocks/scripts.njk' %}
 </body>
