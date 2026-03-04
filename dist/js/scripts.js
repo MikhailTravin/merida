@@ -1765,7 +1765,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function initOrderProcessingFilePreview() {
   function updatePreviewActiveState(previewContainer) {
     if (!previewContainer) return;
-
     if (previewContainer.children.length > 0) {
       previewContainer.classList.add('active');
     } else {
@@ -1776,9 +1775,7 @@ function initOrderProcessingFilePreview() {
   function updateFileInputIcons(fileElement, currentFilesCount) {
     const icon1 = fileElement.querySelector('.order-processing-icon1');
     const icon2 = fileElement.querySelector('.order-processing-icon2');
-
     if (!icon1 || !icon2) return;
-
     if (currentFilesCount === 0) {
       icon1.style.display = '';
       icon2.style.display = 'none';
@@ -1795,25 +1792,21 @@ function initOrderProcessingFilePreview() {
     if (currentFilesCount >= 6) {
       fileElement.style.display = 'none';
     } else {
-      fileElement.style.display = ''; // Возвращаем стандартное отображение
+      fileElement.style.display = '';
     }
   }
 
   function moveFileElement(fileElement, previewContainer, moveToPreview) {
     const photoBlock = fileElement.closest('.popup-order-processing__photo');
     if (!photoBlock) return;
-
     if (moveToPreview) {
-      // Перемещаем file элемент в previewContainer (в самый конец)
       if (fileElement.parentNode !== previewContainer) {
         previewContainer.appendChild(fileElement);
       }
     } else {
-      // Возвращаем file элемент обратно в photoBlock (после preview)
       if (fileElement.parentNode !== photoBlock) {
         const preview = photoBlock.querySelector('.popup-order-processing__preview');
         if (preview) {
-          // Вставляем после preview
           photoBlock.insertBefore(fileElement, preview.nextSibling);
         } else {
           photoBlock.appendChild(fileElement);
@@ -1824,38 +1817,28 @@ function initOrderProcessingFilePreview() {
 
   function updateFilePosition(fileElement, previewContainer) {
     const filesCount = previewContainer.querySelectorAll('.preview-item').length;
-
     if (filesCount > 0 && filesCount < 6) {
-      // Есть картинки, но меньше 6 - перемещаем file в preview (в конец)
       moveFileElement(fileElement, previewContainer, true);
-      fileElement.style.display = ''; // Показываем блок
+      fileElement.style.display = '';
     } else if (filesCount >= 6) {
-      // Достигнут лимит - скрываем блок
       fileElement.style.display = 'none';
-      // Не перемещаем, просто скрываем
     } else {
-      // Нет картинок - возвращаем file обратно и показываем
       moveFileElement(fileElement, previewContainer, false);
-      fileElement.style.display = ''; // Показываем блок
+      fileElement.style.display = '';
     }
   }
 
   const photoBlocks = document.querySelectorAll('.popup-order-processing__photo');
-
   if (photoBlocks.length === 0) return;
 
   photoBlocks.forEach(photoBlock => {
     const fileElement = photoBlock.querySelector('.popup-order-processing__file');
     const previewContainer = photoBlock.querySelector('.popup-order-processing__preview');
     const input = fileElement?.querySelector('input[type="file"]');
-
     if (!fileElement || !previewContainer || !input) return;
 
-    // Устанавливаем атрибут multiple и ограничение по типу
     input.setAttribute('multiple', 'multiple');
     input.setAttribute('accept', 'image/*');
-
-    // Удаляем старый обработчик и добавляем новый
     input.removeEventListener('change', handleFileChange);
     input.addEventListener('change', handleFileChange);
 
@@ -1863,13 +1846,11 @@ function initOrderProcessingFilePreview() {
       const files = Array.from(e.target.files);
       const currentFiles = previewContainer.querySelectorAll('.preview-item').length;
       const remainingSlots = 6 - currentFiles;
-
       if (files.length > remainingSlots) {
         alert(`Можно загрузить не более ${remainingSlots} файлов`);
         input.value = '';
         return;
       }
-
       let addedCount = 0;
       files.forEach(file => {
         if (file.type.startsWith('image/')) {
@@ -1881,33 +1862,24 @@ function initOrderProcessingFilePreview() {
           alert('Пожалуйста, выберите изображение');
         }
       });
-
-      // Очищаем input для возможности повторной загрузки тех же файлов
       input.value = '';
     }
 
-    // Функция создания элемента предпросмотра
     function createPreviewItem(file, fileElement, previewContainer, photoBlock) {
       const previewItem = document.createElement('div');
       previewItem.className = 'preview-item';
-
       previewItem.addEventListener('click', function (event) {
         event.stopPropagation();
       });
-
-      // Создаем превью изображения
       const img = document.createElement('img');
       img.className = 'preview-image';
-
       const reader = new FileReader();
       reader.onload = function (e) {
         img.src = e.target.result;
       };
       reader.readAsDataURL(file);
-
       const fileName = document.createElement('span');
       fileName.className = 'preview-filename';
-
       let displayName = file.name;
       if (displayName.length > 20) {
         const nameParts = displayName.split('.');
@@ -1916,45 +1888,33 @@ function initOrderProcessingFilePreview() {
         displayName = nameWithoutExt.substring(0, 15) + '...' + extension;
       }
       fileName.textContent = displayName;
-
       const removeBtn = document.createElement('button');
       removeBtn.className = 'preview-remove';
-
       removeBtn.addEventListener('click', function (event) {
         event.stopPropagation();
         event.preventDefault();
         previewItem.remove();
-
-        // Обновляем все состояния после удаления
         const currentFilesCount = previewContainer.querySelectorAll('.preview-item').length;
-
         updateFileInputIcons(fileElement, currentFilesCount);
         updatePreviewActiveState(previewContainer);
         updateFilePosition(fileElement, previewContainer);
         updateFileVisibility(fileElement, currentFilesCount);
       });
-
       previewItem.appendChild(img);
       previewItem.appendChild(fileName);
       previewItem.appendChild(removeBtn);
-
-      // Вставляем previewItem перед file элементом (если file уже в preview)
       if (fileElement.parentNode === previewContainer) {
         previewContainer.insertBefore(previewItem, fileElement);
       } else {
         previewContainer.appendChild(previewItem);
       }
-
-      // Обновляем состояния после добавления
       const currentFilesCount = previewContainer.querySelectorAll('.preview-item').length;
-
       updateFileInputIcons(fileElement, currentFilesCount);
       updatePreviewActiveState(previewContainer);
       updateFilePosition(fileElement, previewContainer);
       updateFileVisibility(fileElement, currentFilesCount);
     }
 
-    // Инициализация начального состояния для этого блока
     const initialFilesCount = previewContainer.querySelectorAll('.preview-item').length;
     updateFileInputIcons(fileElement, initialFilesCount);
     updatePreviewActiveState(previewContainer);
@@ -1963,12 +1923,10 @@ function initOrderProcessingFilePreview() {
   });
 }
 
-// Добавляем вызов функции в существующий DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('.services-popup')) {
     initFilePreview();
   }
-
   if (document.querySelector('.popup-order-processing')) {
     initOrderProcessingFilePreview();
   }
