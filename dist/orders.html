@@ -209,7 +209,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#combine-orders">
 															<div class="order-actions__name">
 																<img src="img/icons/layers.svg" alt="">
 																<span>Объединить заказы</span>
@@ -225,7 +225,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#claims">
 															<div class="order-actions__name">
 																<img src="img/icons/anotation.svg" alt="">
 																<span>Претензия</span>
@@ -564,7 +564,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#combine-orders">
 															<div class="order-actions__name">
 																<img src="img/icons/layers.svg" alt="">
 																<span>Объединить заказы</span>
@@ -580,7 +580,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#claims">
 															<div class="order-actions__name">
 																<img src="img/icons/anotation.svg" alt="">
 																<span>Претензия</span>
@@ -919,7 +919,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#combine-orders">
 															<div class="order-actions__name">
 																<img src="img/icons/layers.svg" alt="">
 																<span>Объединить заказы</span>
@@ -935,7 +935,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#claims">
 															<div class="order-actions__name">
 																<img src="img/icons/anotation.svg" alt="">
 																<span>Претензия</span>
@@ -1267,7 +1267,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#combine-orders">
 															<div class="order-actions__name">
 																<img src="img/icons/layers.svg" alt="">
 																<span>Объединить заказы</span>
@@ -1283,7 +1283,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#claims">
 															<div class="order-actions__name">
 																<img src="img/icons/anotation.svg" alt="">
 																<span>Претензия</span>
@@ -1618,7 +1618,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#combine-orders">
 															<div class="order-actions__name">
 																<img src="img/icons/layers.svg" alt="">
 																<span>Объединить заказы</span>
@@ -1634,7 +1634,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#claims">
 															<div class="order-actions__name">
 																<img src="img/icons/anotation.svg" alt="">
 																<span>Претензия</span>
@@ -1969,7 +1969,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#combine-orders">
 															<div class="order-actions__name">
 																<img src="img/icons/layers.svg" alt="">
 																<span>Объединить заказы</span>
@@ -1985,7 +1985,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="./">
+														<a href="./" data-popup="#claims">
 															<div class="order-actions__name">
 																<img src="img/icons/anotation.svg" alt="">
 																<span>Претензия</span>
@@ -2422,6 +2422,173 @@
 							</div>
 							<button type="submit" class="btn">Ок</button>
 						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="combine-orders" aria-hidden="true" class="popup popup-order-processing">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div data-close class="popup__close">
+						<img loading="lazy" src="img/icons/close.svg" alt="">
+					</div>
+					<div class="popup-order-processing__content">
+						<div class="popup-order-processing__title">
+							Объединить заказы
+						</div>
+						<div class="popup-order-processing__body">
+							<div class="popup-order-processing__main-table">
+								<div class="popup-order-processing__name main-table-title">Номер заказа</div>
+								<div class="popup-order-processing__data main-table-title">
+									Дата заказа
+								</div>
+								<div class="popup-order-processing__price main-table-title">
+									Сумма
+								</div>
+							</div>
+							<div class="popup-order-processing__table">
+								<div class="popup-order-processing__name">
+									<label class="checkbox">
+										<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<span class="checkbox__label">
+											<div class="checkbox__icon">
+												<img src="img/icons/check1.svg" alt="">
+											</div>
+											<span class="checkbox__text">С121233</span>
+										</span>
+									</label>
+									<div class="block-orders-photo">
+										<div class="block-orders-photo__image">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+										<div class="block-orders-photo__image">
+											<img src="img/services/image7.webp" alt="">
+										</div>
+										<div class="block-orders-photo__image">
+											<img src="img/services/image1.webp" alt="">
+										</div>
+										<div class="block-orders-photo__image">
+											<img src="img/services/image5.webp" alt="">
+											<span>+2 шт</span>
+										</div>
+									</div>
+								</div>
+								<div class="popup-order-processing__data">
+									21.02.2026
+								</div>
+								<div class="popup-order-processing__price">
+									10 600 ₽
+								</div>
+							</div>
+							<div class="popup-order-processing__table">
+								<div class="popup-order-processing__name">
+									<label class="checkbox">
+										<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<span class="checkbox__label">
+											<div class="checkbox__icon">
+												<img src="img/icons/check1.svg" alt="">
+											</div>
+											<span class="checkbox__text">С121233</span>
+										</span>
+									</label>
+									<div class="block-orders-photo">
+										<div class="block-orders-photo__image">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+										<div class="block-orders-photo__image">
+											<img src="img/services/image7.webp" alt="">
+										</div>
+										<div class="block-orders-photo__image">
+											<img src="img/services/image1.webp" alt="">
+										</div>
+										<div class="block-orders-photo__image">
+											<img src="img/services/image5.webp" alt="">
+											<span>+2 шт</span>
+										</div>
+									</div>
+								</div>
+								<div class="popup-order-processing__data">
+									19.02.2026
+								</div>
+								<div class="popup-order-processing__price">
+									421 ₽
+								</div>
+							</div>
+						</div>
+						<div class="popup-order-processing__buttons">
+							<button type="button" class="btn">Объединить</button>
+							<button type="button" data-close class="btn">Отмена</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="claims" aria-hidden="true" class="popup popup-order-processing claims-order-processing">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div data-close class="popup__close">
+						<img loading="lazy" src="img/icons/close.svg" alt="">
+					</div>
+					<div class="popup-order-processing__content">
+						<div class="popup-order-processing__title">
+							Претензия
+						</div>
+						<div class="popup-order-processing__body">
+							<div class="popup-order-processing__main-table">
+								<div class="popup-order-processing__name main-table-title">Наименование</div>
+								<div class="popup-order-processing__quantity main-table-title">
+									Количество брака
+								</div>
+								<div class="popup-order-processing__photo main-table-title">
+									Фото
+								</div>
+								<div class="popup-order-processing__cause main-table-title">
+									Причина
+								</div>
+							</div>
+							<div class="popup-order-processing__table">
+								<div class="popup-order-processing__name">
+									<img src="img/services/image5.webp" alt="" class="popup-order-processing__pic1">
+									<div class="popup-order-processing__text">
+										Сервисная книжка
+										<span>общая, XL</span>
+									</div>
+								</div>
+								<div class="popup-order-processing__quantity">
+									<div data-quantity class="quantity">
+										<button data-quantity-minus type="button" class="quantity__button quantity__button_minus">
+											<img src="img/icons/minus.svg" alt="">
+										</button>
+										<div class="quantity__input">
+											<input data-quantity-value autocomplete="off" type="text" name="form[]" value="50">
+										</div>
+										<button data-quantity-plus type="button" class="quantity__button quantity__button_plus">
+											<img src="img/icons/plus.svg" alt="">
+										</button>
+									</div>
+								</div>
+								<div class="popup-order-processing__photo main-table-title">
+									<div class="services-popup__file">
+										<input type="file" accept="image/*" multiple>
+										<img src="img/icons/paperclip.svg" alt="" class="order-processing-icon1">
+										<img src="img/icons/plus2.svg" alt="" class="order-processing-icon2">
+									</div>
+									<div class="services-popup__preview"></div>
+								</div>
+								<div class="popup-order-processing__cause main-table-title">
+									<select name="form[]" class="select">
+										<option value="" data-show data-label selected>Выберите причину</option>
+										<option value="1">Брак</option>
+										<option value="2">Повреждение</option>
+										<option value="3">Недостача</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="popup-order-processing__buttons">
+							<button type="button" class="btn">Объединить</button>
+							<button type="button" data-close class="btn">Отмена</button>
+						</div>
 					</div>
 				</div>
 			</div>

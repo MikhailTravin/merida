@@ -1854,3 +1854,31 @@ if (detailButtons.length > 0) {
     });
   });
 }
+
+//========================================================================================================================================================
+
+const radioButtons = document.querySelectorAll('input[name="option"]');
+
+if (radioButtons.length > 0 && document.querySelector('.options__column')) {
+
+  function updateCheckedClass() {
+    document.querySelectorAll('.options__column').forEach(column => {
+      column.classList.remove('checked');
+    });
+
+    const checkedRadio = document.querySelector('input[name="option"]:checked');
+    if (checkedRadio) {
+      const parentColumn = checkedRadio.closest('.options__column');
+      if (parentColumn) {
+        parentColumn.classList.add('checked');
+      }
+    }
+  }
+
+  updateCheckedClass();
+
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', updateCheckedClass);
+  });
+
+}
