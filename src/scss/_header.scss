@@ -16,6 +16,11 @@
             }
         }
     }
+    .container {
+        @media (max-width: 768px) {
+            padding: 0px 0px 0px 0px;
+        }
+    }
     // .header__content
 
     &__content {
@@ -24,16 +29,30 @@
         flex-direction: column;
         gap: 20px;
         @media (max-width: 768px) {
+            position: relative;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             padding-top: 33px;
-            padding-right: 10px;
+            padding-right: 25px;
             padding-bottom: 33px;
-            padding-left: 15px;
+            padding-left: 30px;
             transition:
                 padding-top 0.3s,
                 padding-bottom 0.3s;
+            .location-open & {
+                &::before {
+                    content: "";
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 96;
+                    background-color: rgba(8, 30, 22, 0.25);
+                }
+            }
         }
     }
 }
@@ -92,48 +111,168 @@
             justify-content: space-between;
         }
         a {
+            position: relative;
             display: flex;
-            transition: opacity 0.3s;
             &:hover {
-                opacity: 0.7;
+                img {
+                    opacity: 0.7;
+                }
+                .header-icon-dropdowm {
+                    opacity: 1;
+                }
             }
+
             img {
+                transition: opacity 0.3s;
                 width: 20px;
                 height: 20px;
             }
         }
     }
+}
 
-    // .header-top__location
+.header-icon-dropdowm {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--osnovnoy-belyy);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin: 5px 0px 0px 0px;
+    border-radius: 6px;
+    padding: 4px 8px;
+    background: var(--osnovnoy-tekst);
+    transform: translate(-50%, 0px);
+    z-index: 15;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
 
-    &__location {
+.header-top-location {
+    position: relative;
+    @media (max-width: 768px) {
+        position: static;
+    }
+    &.active {
+        .header-top-location__button {
+            &:hover {
+                .header-icon-dropdowm {
+                    opacity: 0;
+                }
+            }
+        }
+        .header-top-location__dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    // .header-top-location__button
+
+    &__button {
+        cursor: pointer;
+        position: relative;
         font-weight: 400;
         font-size: 14px;
         color: var(--osnovnoy-tekst);
         display: flex;
         align-items: center;
         gap: 10px;
-        @media (max-width: 768px) {
-            display: none;
+        &:hover {
+            span,
+            img {
+                opacity: 0.7;
+            }
+            .header-icon-dropdowm {
+                opacity: 1;
+            }
+        }
+        img {
+            transition: opacity 0.3s;
         }
         span {
+            transition: opacity 0.3s;
             @media (max-width: 768px) {
                 display: none;
             }
         }
-        a {
-            display: flex;
-            transition: opacity 0.3s;
-            &:hover {
-                opacity: 0.7;
+    }
+
+    // .header-top-location__icon
+
+    &__icon {
+        display: flex;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.7;
+        }
+        img {
+            width: 14px;
+            height: 14px;
+            @media (max-width: 768px) {
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
             }
-            img {
-                width: 14px;
-                height: 14px;
-                @media (max-width: 768px) {
-                    img {
-                        width: 20px;
-                        height: 20px;
+        }
+    }
+
+    // .header-top-location__dropdown
+
+    &__dropdown {
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        margin: 10px 0px 0px 0px;
+        background: var(--osnovnoy-belyy);
+        position: absolute;
+        left: 0;
+        border: 1px solid var(--vtorostepennye-elementy);
+        border-radius: 6px;
+        top: 100%;
+        width: 100%;
+        max-height: 200px;
+        padding: 20px;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            top: auto;
+            margin: 0px 0px 0px 0px;
+            bottom: 100%;
+            border-radius: 0px;
+        }
+        @media (max-width: 480px) {
+            padding: 10px;
+        }
+        ul {
+            li {
+                border-bottom: 1px solid var(--vtorostepennye-elementy);
+                &:first-child {
+                    a {
+                        padding: 5px 0px 10px 0px;
+                    }
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: block;
+                    padding: 15px 0px 10px 0px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    letter-spacing: 0.03em;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: var(--osnovnoy-krasnyy);
                     }
                 }
             }
@@ -361,6 +500,7 @@
     // .header-search__close
 
     &__close {
+        cursor: pointer;
         width: 20px;
         display: flex;
         justify-content: center;

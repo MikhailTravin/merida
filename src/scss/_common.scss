@@ -11,6 +11,22 @@ body {
   .lock & {
     overflow: hidden;
   }
+  .location-open & {
+    @media (max-width: 768px) {
+      overflow: hidden;
+      &::before {
+        content: "";
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 96;
+        background-color: rgba(8, 30, 22, 0.25);
+      }
+    }
+  }
   .menu-open & {
     overflow: hidden;
     &::before {

@@ -1024,6 +1024,9 @@
         }
         @media (max-width: 1200px) {
             flex: 0 0 60px;
+            img {
+                filter: invert(50%) sepia(90%) saturate(401%) hue-rotate(84deg) brightness(85%) contrast(90%);
+            }
             span {
                 display: none;
             }
@@ -1034,6 +1037,14 @@
         @media (max-width: 400px) {
             flex: 0 0 35px;
         }
+        &.red {
+            color: var(--osnovnoy-krasnyy);
+            img {
+                @media (max-width: 1200px) {
+                    filter: invert(53%) sepia(46%) saturate(6308%) hue-rotate(335deg) brightness(106%) contrast(103%);
+                }
+            }
+        }
         &:hover {
             opacity: 0.7;
         }
@@ -1043,11 +1054,6 @@
             @media (max-width: 400px) {
                 width: 16px;
                 height: 16px;
-            }
-        }
-        span {
-            &.red {
-                color: var(--osnovnoy-krasnyy);
             }
         }
     }
@@ -1249,6 +1255,9 @@
     // .block-orders__column
 
     &__column {
+        &.hide {
+            display: none;
+        }
         @media (max-width: 1200px) {
             border-bottom: 1px solid var(--vtorostepennye-elementy);
             padding: 0px 0px 20px 0px;

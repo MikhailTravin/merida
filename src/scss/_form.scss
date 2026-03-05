@@ -382,6 +382,7 @@
     // .form-calendar__input
 
     &__input {
+        position: relative;
         background: var(--vtorostepennye-polya-vvoda);
         border-radius: 8px;
         padding: 8px 12px;
@@ -407,6 +408,25 @@
 
     &__label {
     }
+}
+input[type="date"] {
+    font-weight: 400;
+    font-size: 14px;
+}
+input[type="date"]::before {
+    content: "" !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
 }
 .add-form-button {
     cursor: pointer;
