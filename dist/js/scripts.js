@@ -725,6 +725,8 @@ function safeInitMap(mapElement) {
 
 const searchButton = document.querySelector('.header-search__button');
 const searchBlock = document.querySelector('.header-search');
+const searchInput = document.querySelector('.header-search__input input');
+const searchClose = document.querySelector('.header-search__close');
 
 if (searchButton && searchBlock) {
   searchButton.addEventListener('click', function () {
@@ -739,6 +741,13 @@ if (searchButton && searchBlock) {
         searchBlock.classList.remove('active');
       }
     }
+  });
+}
+
+if (searchClose && searchInput) {
+  searchClose.addEventListener('click', function () {
+    searchInput.value = '';
+    searchInput.focus();
   });
 }
 
@@ -2053,4 +2062,175 @@ if (radioButtons.length > 0 && document.querySelector('.options__column')) {
     radio.addEventListener('change', updateCheckedClass);
   });
 
+}
+
+//========================================================================================================================================================
+
+const formsPopup = document.querySelectorAll('.popup-approval-layouts__form');
+
+if (formsPopup) {
+  formsPopup.forEach(form => {
+    const selectElement = form.querySelector('.select._select-active select');
+    const textareaContainer = form.querySelector('.popup-approval-layouts__input');
+
+    if (selectElement && textareaContainer) {
+      function updateTextareaVisibility() {
+        if (selectElement.value === '2') {
+          textareaContainer.classList.add('active');
+        } else {
+          textareaContainer.classList.remove('active');
+        }
+      }
+
+      selectElement.addEventListener('change', updateTextareaVisibility);
+      updateTextareaVisibility();
+    }
+  });
+}
+
+//========================================================================================================================================================
+
+const locationElements = document.querySelectorAll('.header-top-location');
+if (locationElements) {
+  function updateHtmlClass() {
+    const hasActiveLocation = Array.from(locationElements).some(el => el.classList.contains('active'));
+
+    if (hasActiveLocation) {
+      document.documentElement.classList.add('location-open');
+
+      closeMenuIfOpen();
+    } else {
+      document.documentElement.classList.remove('location-open');
+    }
+  }
+
+  function closeMenuIfOpen() {
+    if (document.documentElement.classList.contains('menu-open')) {
+      document.documentElement.classList.remove('menu-open');
+
+      const menuElements = document.querySelectorAll('.header-menu');
+      menuElements.forEach(el => el.classList.remove('active'));
+
+      const burgerButton = document.querySelector('.burger-button');
+      if (burgerButton && burgerButton.classList.contains('active')) {
+        burgerButton.classList.remove('active');
+      }
+    }
+  }
+
+  locationElements.forEach(function (element) {
+    const button = element.querySelector('.header-top-location__button');
+
+    if (button) {
+      button.addEventListener('click', function (event) {
+        event.stopPropagation();
+
+        element.classList.toggle('active');
+
+        updateHtmlClass();
+      });
+    }
+  });
+
+  document.addEventListener('click', function (event) {
+    let shouldClose = true;
+
+    locationElements.forEach(function (element) {
+      if (element.contains(event.target)) {
+        shouldClose = false;
+      }
+    });
+
+    if (shouldClose) {
+      locationElements.forEach(function (element) {
+        element.classList.remove('active');
+      });
+      updateHtmlClass();
+    }
+  });
+
+  updateHtmlClass();
+}
+
+//========================================================================================================================================================
+
+const filterTitles = document.querySelectorAll('.block-orders-top__title');
+const orderColumns = document.querySelectorAll('.block-orders__column');
+
+if (filterTitles) {
+  function filterOrders(selectedFilter) {
+    filterTitles.forEach(item => item.classList.remove('active'));
+
+    const activeTitle = Array.from(filterTitles).find(title => title.dataset.filter === selectedFilter);
+    if (activeTitle) {
+      activeTitle.classList.add('active');
+    }
+
+    orderColumns.forEach(column => {
+      const columnFilters = column.dataset.filter;
+
+      if (selectedFilter === 'all') {
+        column.classList.remove('hide');
+      } else {
+        if (columnFilters && columnFilters.split(',').map(f => f.trim()).includes(selectedFilter)) {
+          column.classList.remove('hide');
+        } else {
+          column.classList.add('hide');
+        }
+      }
+    });
+  }
+
+  filterTitles.forEach(title => {
+    title.addEventListener('click', function () {
+      const filterValue = this.dataset.filter;
+      filterOrders(filterValue);
+    });
+  });
+
+  const initialActive = document.querySelector('.block-orders-top__title.active');
+  if (initialActive) {
+    filterOrders(initialActive.dataset.filter);
+  } else {
+    filterOrders('all');
+  }
+}
+
+//========================================================================================================================================================
+
+if (document.querySelector('.images-product')) {
+  const thumbsSwiper = new Swiper('.images-product__thumb', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 4,
+    spaceBetween: 5,
+    speed: 400,
+    preloadImages: true,
+    navigation: {
+      prevEl: '.images-product__arrow-prev',
+      nextEl: '.images-product__arrow-next',
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  const mainThumbsSwiper = new Swiper('.images-product__slider', {
+    thumbs: {
+      swiper: thumbsSwiper
+    },
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 400,
+    preloadImages: true,
+    navigation: {
+      prevEl: '.images-product__arrow-prev',
+      nextEl: '.images-product__arrow-next',
+    },
+  });
 }

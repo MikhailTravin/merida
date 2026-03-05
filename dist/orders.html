@@ -28,25 +28,61 @@
 								<div class="header-top__icons">
 									<a href="./">
 										<img src="img/icons/box.svg" alt="">
+										<span class="header-icon-dropdowm">Заказы</span>
 									</a>
 									<a href="./">
 										<img src="img/icons/cart.svg" alt="">
+										<span class="header-icon-dropdowm">Корзина</span>
 									</a>
 									<a href="./">
 										<img src="img/icons/settings.svg" alt="">
+										<span class="header-icon-dropdowm">Настройки</span>
 									</a>
 									<a data-da=".header-bottom__icons, 768" href="./">
 										<img src="img/icons/users.svg" alt="">
+										<span class="header-icon-dropdowm">Персонал</span>
 									</a>
 									<a data-da=".header-bottom__icons, 768" href="./">
 										<img src="img/icons/login.svg" alt="">
+										<span class="header-icon-dropdowm">Выход</span>
 									</a>
 								</div>
-								<div class="header-top__location">
-									<a data-da=".header-top__icons, 768,last" href="./">
-										<img src="img/icons/rotate.svg" alt="">
-									</a>
-									<span>ООО ТАМБОВ-АВТО-СИТИ, Тамбов</span>
+								<div data-da=".header-top__icons, 768,last" class="header-top-location">
+									<div class="header-top-location__button">
+										<div class="header-top-location__icon">
+											<img src="img/icons/rotate.svg" alt="">
+										</div>
+										<span>ООО ТАМБОВ-АВТО-СИТИ, Тамбов</span>
+										<span class="header-icon-dropdowm">Сменить профиль</span>
+									</div>
+									<div class="header-top-location__dropdown">
+										<ul>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Кемерово</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Аэропорт</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Алибашевского</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Новокузнецк</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Кемерово</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Аэропорт</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Алибашевского</a>
+											</li>
+											<li>
+												<a href="./">ООО «Р-Моторс ЛАДА», Новокузнецк</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -148,7 +184,7 @@
 							</div>
 						</div>
 						<div class="block-orders__content">
-							<div class="block-orders__column">
+							<div data-filter="agreed, not-paid" class="block-orders__column">
 								<div class="block-orders__info">
 									<div class="block-orders-info1">
 										<div class="block-orders-info1__left">
@@ -307,7 +343,7 @@
 											</div>
 										</a>
 										<div class="cart-tables__right">
-											<a href="./" class="cart-tables__apps">
+											<a href="./" data-popup="#edit-quantity" class="cart-tables__apps">
 												<img src="img/icons/apps.svg" alt="">
 											</a>
 											<div class="cart-tables__quantity">
@@ -329,9 +365,9 @@
 													<span>скидка 10%</span>
 												</div>
 											</div>
-											<a href="./" data-popup="#approval-layouts1" class="cart-tables__layout">
+											<a href="./" data-popup="#approval-layouts1" class="cart-tables__layout red">
 												<img src="img/icons/area.svg" alt="">
-												<span class="red">Утвердите макет</span>
+												<span>Утвердите макет</span>
 											</a>
 											<div class="cart-tables__close">
 												<button type="button">
@@ -503,7 +539,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="block-orders__column">
+							<div data-filter="agreed, not-paid" class="block-orders__column">
 								<div class="block-orders__info">
 									<div class="block-orders-info1">
 										<div class="block-orders-info1__left">
@@ -662,7 +698,7 @@
 											</div>
 										</a>
 										<div class="cart-tables__right">
-											<a href="./" class="cart-tables__apps">
+											<a href="./" data-popup="#edit-quantity" class="cart-tables__apps">
 												<img src="img/icons/apps.svg" alt="">
 											</a>
 											<div class="cart-tables__quantity">
@@ -1013,7 +1049,7 @@
 											</div>
 										</a>
 										<div class="cart-tables__right">
-											<a href="./" class="cart-tables__apps">
+											<a href="./" data-popup="#edit-quantity" class="cart-tables__apps">
 												<img src="img/icons/apps.svg" alt="">
 											</a>
 											<div class="cart-tables__quantity">
@@ -1361,7 +1397,7 @@
 											</div>
 										</a>
 										<div class="cart-tables__right">
-											<a href="./" class="cart-tables__apps">
+											<a href="./" data-popup="#edit-quantity" class="cart-tables__apps">
 												<img src="img/icons/apps.svg" alt="">
 											</a>
 											<div class="cart-tables__quantity">
@@ -1557,7 +1593,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="block-orders__column">
+							<div data-filter="sent" class="block-orders__column">
 								<div class="block-orders__info">
 									<div class="block-orders-info1">
 										<div class="block-orders-info1__left">
@@ -1712,7 +1748,7 @@
 											</div>
 										</a>
 										<div class="cart-tables__right">
-											<a href="./" class="cart-tables__apps">
+											<a href="./" data-popup="#edit-quantity" class="cart-tables__apps">
 												<img src="img/icons/apps.svg" alt="">
 											</a>
 											<div class="cart-tables__quantity">
@@ -1908,7 +1944,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="block-orders__column">
+							<div data-filter="not-paid" class="block-orders__column">
 								<div class="block-orders__info">
 									<div class="block-orders-info1">
 										<div class="block-orders-info1__left">
@@ -2050,7 +2086,7 @@
 											</div>
 										</a>
 										<div class="cart-tables__right">
-											<a href="./" class="cart-tables__apps">
+											<a href="./" data-popup="#edit-quantity" class="cart-tables__apps">
 												<img src="img/icons/apps.svg" alt="">
 											</a>
 											<div class="cart-tables__quantity">
@@ -2379,15 +2415,44 @@
 						<img loading="lazy" src="img/icons/close.svg" alt="">
 					</div>
 					<div class="popup-approval-layouts__body">
-						<div class="popup-approval-layouts__image">
-							<img src="img/services/image5.webp" alt="">
+						<div class="images-product">
+							<div class="images-product__swiper">
+								<div class="images-product__slider swiper">
+									<div class="images-product__wrapper swiper-wrapper">
+										<div class="images-product__slide swiper-slide">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+										<div class="images-product__slide swiper-slide">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+										<div class="images-product__slide swiper-slide">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="images-product__thumbs">
+								<div class="images-product__thumb swiper">
+									<div class="images-product__wrapper swiper-wrapper">
+										<div class="images-product__slide swiper-slide">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+										<div class="images-product__slide swiper-slide">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+										<div class="images-product__slide swiper-slide">
+											<img src="img/services/image5.webp" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<form action="#" class="popup-approval-layouts__form">
-							<div data-spollers class="popup-approval-layouts__inputs">
-								<div data-spoller class="popup-approval-layouts__button">
-									<span>Не утвержден</span>
-									<img src="img/icons/arrow2.svg" alt="">
-								</div>
+							<div class="popup-approval-layouts__inputs">
+								<select name="form[]" class="select">
+									<option value="1">Утвержден</option>
+									<option selected value="2">Не утвержден</option>
+								</select>
 								<div class="popup-approval-layouts__input">
 									<label for="textarea1">Правки к макету</label>
 									<textarea id="textarea1"></textarea>
@@ -2410,11 +2475,11 @@
 							<img src="img/services/image5.webp" alt="">
 						</div>
 						<form action="#" class="popup-approval-layouts__form">
-							<div data-spollers class="popup-approval-layouts__inputs disabled">
-								<div data-spoller class="popup-approval-layouts__button">
-									<span>Утвержден</span>
-									<img src="img/icons/arrow2.svg" alt="">
-								</div>
+							<div class="popup-approval-layouts__inputs">
+								<select name="form[]" class="select">
+									<option selected value="1">Утвержден</option>
+									<option value="2">Не утвержден</option>
+								</select>
 								<div class="popup-approval-layouts__input">
 									<label for="textarea1">Правки к макету</label>
 									<textarea id="textarea1"></textarea>
@@ -2624,14 +2689,13 @@
 							</div>
 						</div>
 						<div class="popup-order-processing__buttons">
-							<button type="button" class="btn">Объединить</button>
+							<button type="button" class="btn">Отравить</button>
 							<button type="button" data-close class="btn">Отмена</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--Редактировать количество-->
 		<div id="edit-quantity" aria-hidden="true" class="popup popup-quantity">
 			<div class="popup__wrapper">
 				<div class="popup__content">
