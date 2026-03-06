@@ -328,21 +328,87 @@
                             </div>
                             <div class="form__body">
                                 <div class="form-calendar">
-                                    <div class="form-calendar__input">
-                                        <div class="form-calendar__label">
-                                            С
+                                    <div class="form-calendar__inputs">
+                                        <div class="form-calendar__input">
+                                            <div class="form-calendar__label">
+                                                С
+                                            </div>
+                                            <input readonly autocomplete="off" type="text" class="input-calendar"
+                                                data-start name="form[]" data-error="Ошибка" placeholder="">
+                                            <img src="img/icons/calendar.svg" alt="">
                                         </div>
-                                        <input autocomplete="off" type="date" name="form[]" data-error="Ошибка"
-                                            placeholder="">
-                                        <img src="img/icons/calendar.svg" alt="">
+                                        <div class="calendar">
+                                            <div class="calendar__content">
+                                                <div class="calendar__header">
+                                                    <button type="button" class="calendar__btn-prev calendar-btn">
+                                                        <img src="img/icons/arrow2.svg" alt="">
+                                                    </button>
+                                                    <span></span>
+                                                    <button type="button" class="calendar__btn-next calendar-btn">
+                                                        <img src="img/icons/arrow2.svg" alt="">
+                                                    </button>
+                                                </div>
+                                                <div class="calendar__wrapper">
+                                                    <div class="calendar__days">
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Пн</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Вт</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Ср</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Чт</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Пт</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Сб</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Вс</span></div>
+                                                    </div>
+                                                    <div class="calendar__main"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-calendar__input">
-                                        <div class="form-calendar__label">
-                                            По
+                                    <div class="form-calendar__inputs">
+                                        <div class="form-calendar__input">
+                                            <div class="form-calendar__label">
+                                                По
+                                            </div>
+                                            <input readonly autocomplete="off" type="text" class="input-calendar"
+                                                data-start name="form[]" data-error="Ошибка" placeholder="">
+                                            <img src="img/icons/calendar.svg" alt="">
                                         </div>
-                                        <input autocomplete="off" type="date" name="form[]" data-error="Ошибка"
-                                            placeholder="">
-                                        <img src="img/icons/calendar.svg" alt="">
+                                        <div class="calendar">
+                                            <div class="calendar__content">
+                                                <div class="calendar__header">
+                                                    <button type="button"
+                                                        class="calendar__btn-prev calendar-btn"></button>
+                                                    <span></span>
+                                                    <button type="button"
+                                                        class="calendar__btn-next calendar-btn"></button>
+                                                </div>
+                                                <div class="calendar__wrapper">
+                                                    <div class="calendar__days">
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Пн</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Вт</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Ср</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Чт</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Пт</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Сб</span></div>
+                                                        <div class="cell_wrapper cal_days"><span
+                                                                class="cell_item">Вс</span></div>
+                                                    </div>
+                                                    <div class="calendar__main"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button type="button" class="btn">Отправить запрос</button>
                                 </div>

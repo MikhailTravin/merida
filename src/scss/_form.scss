@@ -379,9 +379,27 @@
             grid-column: -1/1;
         }
     }
+
+    // .form-calendar__inputs
+
+    &__inputs {
+        position: relative;
+        &.active {
+            .calendar {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .form-calendar__input {
+                border-radius: 0px 0px 8px 8px;
+            }
+        }
+    }
+
     // .form-calendar__input
 
     &__input {
+        transition: border-radius 0.3s;
+        cursor: pointer;
         position: relative;
         background: var(--vtorostepennye-polya-vvoda);
         border-radius: 8px;
@@ -409,24 +427,173 @@
     &__label {
     }
 }
-input[type="date"] {
-    font-weight: 400;
-    font-size: 14px;
-}
-input[type="date"]::before {
-    content: "" !important;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
+
+//Календарь
+.calendar {
     position: absolute;
-    top: 0;
+    bottom: 100%;
+    z-index: 40;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
-    height: 100%;
+    flex: 1 1 auto;
+    background: #fff;
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    @media (max-width: 600px) {
+        position: fixed;
+        bottom: 56px;
+        z-index: 101;
+    }
+    // .calendar__content
+    &__content {
+    }
+    // .calendar__header
+    &__header {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 12px 0px;
+        span {
+            flex: 1 1 auto;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 133%;
+            letter-spacing: -0.01em;
+            text-align: center;
+        }
+    }
+    // .calendar__btn-prev
+    &__btn-prev {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px 0px 0px;
+        img {
+            transform: rotate(90deg);
+        }
+    }
+    // .calendar__btn-next
+    &__btn-next {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 0px 10px;
+        img {
+            transform: rotate(-90deg);
+        }
+    }
+    // .calendar__wrapper
+    &__wrapper {
+    }
+    // .calendar__days
+    &__days {
+        display: grid;
+        height: 40px;
+        column-gap: 2px;
+        grid-template-columns: repeat(7, 1fr);
+        pointer-events: none;
+    }
+    // .calendar__main
+    &__main {
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, min(40px));
+        @media (max-width: 375px) {
+            grid-template-rows: repeat(5, min(35px));
+        }
+    }
+}
+
+.cell_wrapper.current {
+    opacity: 1;
+    color: #000;
+}
+.cell_wrapper {
     cursor: pointer;
-    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #000;
+    &:nth-child(n + 36) {
+        display: none;
+    }
+    &.isCurrent {
+        border: 1px solid #000;
+        background: transparent;
+        color: #000;
+        font-weight: 700;
+    }
+    &.isCurrent.isSelected {
+        border: 1px solid transparent;
+        background: #107ab0;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+.cell_wrapper.cal_date.prev-month.disabled {
+    color: #aaa;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+.cell_wrapper.cal_date.next-month.disabled {
+    color: #aaa;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.cell_wrapper.cal_date.prev-month {
+    color: #aaa;
+}
+.cell_wrapper.cal_date.next-month {
+    color: #aaa;
+}
+
+.cell_wrapper.disabled {
+    color: #aaa;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.cell_wrapper.isCurrent .cell_wrapper.cal_days {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    text-align: center;
+    color: #000;
+}
+
+.cell_wrapper.cal_date.current.isCurrent.inRange {
+    border: 1px solid transparent;
+}
+
+.cell_wrapper.inRange {
+    background-color: #107ab0;
+}
+
+.cell_wrapper.current.inRange {
+    background-color: #107ab0;
+    border-radius: 0;
+}
+
+.cell_wrapper.isSelected {
+    background-color: #107ab0;
+    color: #fff;
 }
 .add-form-button {
     cursor: pointer;
