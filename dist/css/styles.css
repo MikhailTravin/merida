@@ -1234,7 +1234,7 @@ a {
   height: 14px;
 }
 @media (max-width: 768px) {
-  .header-top-location__icon img img {
+  .header-top-location__icon img {
     width: 20px;
     height: 20px;
   }
