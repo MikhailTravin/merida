@@ -2234,3 +2234,645 @@ if (document.querySelector('.images-product')) {
     },
   });
 }
+
+//========================================================================================================================================================
+
+function createCustomSelect(placeholder) {
+  const templateSelect = document.querySelector('#car-modal .select');
+  if (!templateSelect) return null;
+
+  const newSelectWrapper = document.createElement('div');
+  newSelectWrapper.className = 'select';
+
+  const newSelect = document.createElement('select');
+  newSelect.name = 'form[]';
+  newSelect.className = 'select';
+  newSelect.setAttribute('hidden', '');
+
+  const uniqueId = Date.now() + Math.floor(Math.random() * 1000);
+  newSelect.setAttribute('data-id', uniqueId);
+  newSelect.setAttribute('data-placeholder', placeholder);
+  newSelect.setAttribute('data-speed', '150');
+
+  const options = [
+    { value: '', label: placeholder, selected: true, disabled: true, hidden: true },
+    { value: '1', label: 'Пункт №1' },
+    { value: '2', label: 'Пункт №2' },
+    { value: '3', label: 'Пункт №3' },
+    { value: '4', label: 'Пункт №4' }
+  ];
+
+  options.forEach(opt => {
+    const option = document.createElement('option');
+    option.value = opt.value;
+    option.textContent = opt.label;
+
+    if (opt.value === '') {
+      option.setAttribute('data-show', '');
+      option.setAttribute('data-label', '');
+      option.setAttribute('selected', '');
+      option.disabled = true;
+      option.hidden = true;
+    }
+
+    newSelect.appendChild(option);
+  });
+
+  const selectBody = document.createElement('div');
+  selectBody.className = 'select__body';
+
+  const selectTitle = document.createElement('button');
+  selectTitle.type = 'button';
+  selectTitle.className = 'select__title';
+
+  const selectLabel = document.createElement('span');
+  selectLabel.className = 'select__label';
+  selectLabel.textContent = placeholder;
+
+  const selectValue = document.createElement('span');
+  selectValue.className = 'select__value';
+
+  const selectContent = document.createElement('span');
+  selectContent.className = 'select__content';
+
+  selectValue.appendChild(selectContent);
+  selectTitle.appendChild(selectLabel);
+  selectTitle.appendChild(selectValue);
+
+  const selectOptions = document.createElement('div');
+  selectOptions.className = 'select__options';
+  selectOptions.setAttribute('hidden', '');
+
+  const selectScroll = document.createElement('div');
+  selectScroll.className = 'select__scroll';
+
+  options.slice(1).forEach(opt => {
+    const optionBtn = document.createElement('button');
+    optionBtn.className = 'select__option';
+    optionBtn.setAttribute('data-value', opt.value);
+    optionBtn.type = 'button';
+    optionBtn.textContent = opt.label;
+
+    optionBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      const parentSelect = this.closest('.select');
+      if (!parentSelect) return;
+
+      const hiddenSelect = parentSelect.querySelector('select');
+      const titleBtn = parentSelect.querySelector('.select__title');
+      const labelSpan = parentSelect.querySelector('.select__label');
+      const contentSpan = parentSelect.querySelector('.select__content');
+
+      if (hiddenSelect) {
+        Array.from(hiddenSelect.options).forEach(opt => {
+          opt.selected = opt.value === this.dataset.value;
+        });
+      }
+
+      if (labelSpan) labelSpan.textContent = this.textContent;
+      if (contentSpan) contentSpan.textContent = this.textContent;
+
+      const optionsDiv = parentSelect.querySelector('.select__options');
+      if (optionsDiv) {
+        optionsDiv.setAttribute('hidden', '');
+      }
+
+      if (hiddenSelect) {
+        hiddenSelect.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+
+    selectScroll.appendChild(optionBtn);
+  });
+
+  selectOptions.appendChild(selectScroll);
+  selectBody.appendChild(selectTitle);
+  selectBody.appendChild(selectOptions);
+
+  newSelectWrapper.appendChild(newSelect);
+  newSelectWrapper.appendChild(selectBody);
+
+  selectTitle.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const optionsDiv = this.nextElementSibling;
+    if (!optionsDiv) return;
+
+    const isHidden = optionsDiv.hasAttribute('hidden');
+
+    document.querySelectorAll('.select__options:not([hidden])').forEach(el => {
+      if (el !== optionsDiv) {
+        el.setAttribute('hidden', '');
+      }
+    });
+
+    if (isHidden) {
+      optionsDiv.removeAttribute('hidden');
+    } else {
+      optionsDiv.setAttribute('hidden', '');
+    }
+  });
+
+  return newSelectWrapper;
+}
+
+function createCarColumn(carData) {
+  const column = document.createElement('div');
+  column.className = 'car-modal__column';
+
+  column.innerHTML = `
+            <div class="car-modal__close">
+                <img src="img/icons/close3.svg" alt="">
+            </div>
+            <div class="car-modal__descr1">
+                <div class="car-modal__image">
+                    <img src="${carData.image}" alt="${carData.name}">
+                </div>
+                <div class="car-modal__titles">
+                    <div class="car-modal__name">${carData.name}</div>
+                    <div class="car-modal__price">${carData.price}</div>
+                </div>
+                <div class="car-modal__selects" id="selects-container-${Date.now()}">
+                </div>
+            </div>
+        `;
+
+  const selectsContainer = column.querySelector('.car-modal__selects');
+
+  const placeholders = ['Назначение', 'Исполнение', 'Цвет'];
+  placeholders.forEach(placeholder => {
+    const customSelect = createCustomSelect(placeholder);
+    if (customSelect) {
+      selectsContainer.appendChild(customSelect);
+    }
+  });
+
+  const closeBtn = column.querySelector('.car-modal__close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      column.remove();
+    });
+  }
+
+  return column;
+}
+
+const addCarPopup = document.getElementById('add-car');
+if (addCarPopup) {
+  const carCards = document.querySelectorAll('#add-car .car-card');
+  carCards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const nameElement = this.querySelector('.car-card__name');
+      const priceElement = this.querySelector('.car-card__price');
+      const imageElement = this.querySelector('.car-card__image img');
+
+      if (!nameElement || !priceElement || !imageElement) return;
+
+      const carName = nameElement.textContent.trim();
+      const carPrice = priceElement.textContent.trim();
+      const carImage = imageElement.src;
+
+      const carData = {
+        name: carName,
+        price: carPrice,
+        image: carImage
+      };
+
+      const newCarColumn = createCarColumn(carData);
+
+      const carModalColumns = document.querySelector('#car-modal .car-modal__columns');
+
+      if (carModalColumns && newCarColumn) {
+        const addCarLink = carModalColumns.querySelector('.add-car-column');
+
+        if (addCarLink) {
+          carModalColumns.insertBefore(newCarColumn, addCarLink);
+        } else {
+          carModalColumns.appendChild(newCarColumn);
+        }
+      }
+
+      if (addCarPopup) {
+        addCarPopup.classList.remove('open');
+        addCarPopup.setAttribute('aria-hidden', 'true');
+      }
+
+      const carModal = document.getElementById('car-modal');
+      if (carModal && carModal.getAttribute('aria-hidden') === 'true') {
+        carModal.classList.add('open');
+        carModal.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+}
+
+const carModal = document.getElementById('car-modal');
+if (carModal) {
+  document.querySelectorAll('#car-modal .car-modal__close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      const column = this.closest('.car-modal__column');
+      if (column && !column.classList.contains('add-car-column')) {
+        column.remove();
+      }
+    });
+  });
+}
+
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.select')) {
+    document.querySelectorAll('.select__options:not([hidden])').forEach(el => {
+      if (el) {
+        el.setAttribute('hidden', '');
+      }
+    });
+  }
+});
+
+//========================================================================================================================================================
+
+const calendars = document.querySelectorAll(".calendar");
+if (calendars.length > 0) {
+  calendars.forEach(calendar => {
+    const calendarMain = calendar.querySelector(".calendar__main");
+    const calHeaderTitle = calendar.querySelector(".calendar__header span");
+
+    const parentInputs = calendar.closest(".form-calendar__inputs");
+
+    if (!parentInputs) {
+      return;
+    }
+
+    const input = parentInputs.querySelector(".input-calendar");
+    if (!input) {
+      return;
+    }
+
+    const months = [
+      "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+      "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    ];
+
+    const todayTimestamp = Date.now() - (Date.now() % (24 * 60 * 60 * 1000));
+    let selectedDate = null;
+
+    const getNumberOfDays = (year, month) => {
+      return new Date(year, month + 1, 0).getDate();
+    };
+
+    const getDayDetails = (args) => {
+      let date = args.index - args.firstDay;
+      let dayOfWeek = (args.index % 7 + 7) % 7;
+      let prevMonth = args.month - 1;
+      let nextMonth = args.month + 1;
+      let prevYear = args.year;
+      let nextYear = args.year;
+
+      if (prevMonth < 0) {
+        prevMonth = 11;
+        prevYear--;
+      }
+      if (nextMonth > 11) {
+        nextMonth = 0;
+        nextYear++;
+      }
+
+      let prevMonthDays = getNumberOfDays(prevYear, prevMonth);
+      let currentMonthDays = getNumberOfDays(args.year, args.month);
+
+      let displayDate, displayMonth, displayYear;
+      if (date < 0) {
+        displayDate = prevMonthDays + date + 1;
+        displayMonth = prevMonth;
+        displayYear = prevYear;
+      } else if (date >= currentMonthDays) {
+        displayDate = date - currentMonthDays + 1;
+        displayMonth = nextMonth;
+        displayYear = nextYear;
+      } else {
+        displayDate = date + 1;
+        displayMonth = args.month;
+        displayYear = args.year;
+      }
+
+      let timestamp = new Date(Date.UTC(displayYear, displayMonth, displayDate)).getTime();
+      return {
+        date: displayDate,
+        day: dayOfWeek,
+        month: displayMonth === args.month ? 0 : displayMonth < args.month ? -1 : 1,
+        timestamp: timestamp
+      };
+    };
+
+    const getMonthDetails = (year, month) => {
+      let firstDay = new Date(Date.UTC(year, month, 1)).getUTCDay();
+      firstDay = firstDay === 0 ? 6 : firstDay - 1;
+      let monthArray = [];
+      for (let i = 0; i < 42; i++) {
+        monthArray.push(getDayDetails({
+          index: i,
+          firstDay: firstDay,
+          year: year,
+          month: month
+        }));
+      }
+      return monthArray;
+    };
+
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let monthDetails = getMonthDetails(year, month);
+
+    const setCalBody = (monthDetails) => {
+      calendarMain.innerHTML = "";
+      monthDetails.forEach(day => {
+        let div = document.createElement("div");
+        let span = document.createElement("span");
+
+        div.classList.add("cell_wrapper");
+        div.classList.add("cal_date");
+
+        if (day.month === 0) {
+          div.classList.add("current");
+        } else if (day.month === -1) {
+          div.classList.add("prev-month");
+        } else if (day.month === 1) {
+          div.classList.add("next-month");
+        }
+
+        if (day.timestamp === todayTimestamp && day.month === 0) {
+          div.classList.add("isCurrent");
+        }
+
+        if (day.timestamp < todayTimestamp) {
+          div.classList.add("disabled");
+          div.style.pointerEvents = "none";
+        }
+
+        span.classList.add("cell_item");
+        span.innerText = day.date;
+        div.setAttribute("data-timestamp", day.timestamp);
+        div.appendChild(span);
+        calendarMain.appendChild(div);
+      });
+    };
+
+    const setHeader = (year, month) => {
+      calHeaderTitle.innerHTML = `${months[month]} ${year}`;
+    };
+
+    const navigateMonth = (offset) => {
+      month += offset;
+      if (month === -1) {
+        month = 11;
+        year--;
+      } else if (month === 12) {
+        month = 0;
+        year++;
+      }
+      monthDetails = getMonthDetails(year, month);
+      setHeader(year, month);
+      setCalBody(monthDetails);
+    };
+
+    setHeader(year, month);
+    setCalBody(monthDetails);
+
+    calendar.querySelectorAll(".calendar-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        let offset = btn.classList.contains("calendar__btn-prev") ? -1 : 1;
+        navigateMonth(offset);
+      });
+    });
+
+    const clearSelection = () => {
+      selectedDate = null;
+      calendar.querySelectorAll(".cell_wrapper").forEach(cell => {
+        cell.classList.remove("isSelected");
+      });
+    };
+
+    const updateInputValue = (timestamp) => {
+      const dateString = getDateStringFromTimestamp(timestamp);
+      input.value = dateString;
+
+      if (input.hasAttribute("data-start")) {
+        input.dataset.start = dateString;
+      } else {
+        input.dataset.end = dateString;
+      }
+    };
+
+    const getDateStringFromTimestamp = (timestamp) => {
+      let dateObject = new Date(timestamp);
+      let year = dateObject.getUTCFullYear();
+      let month = String(dateObject.getUTCMonth() + 1).padStart(2, '0');
+      let day = String(dateObject.getUTCDate()).padStart(2, '0');
+      return `${day}-${month}-${year}`;
+    };
+
+    const closeCalendar = () => {
+      document.querySelectorAll('.form-calendar__inputs').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      document.documentElement.classList.remove('open-calendar');
+
+      const filterTabsButtons = document.querySelectorAll('.drop-down-button');
+      const shadow = document.querySelector('.shadow');
+      if (shadow) {
+        shadow.classList.remove("_active");
+      }
+      document.documentElement.classList.remove('filter-open');
+      filterTabsButtons.forEach((button) => button.classList.remove("_active"));
+    };
+
+    calendarMain.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      const target = e.target.closest(".cell_wrapper.current");
+      if (!target || target.classList.contains("disabled")) {
+        return;
+      }
+
+      const cellTimestamp = parseInt(target.getAttribute("data-timestamp"));
+      if (!cellTimestamp) {
+        return;
+      }
+
+      clearSelection();
+      selectedDate = cellTimestamp;
+      target.classList.add("isSelected");
+      updateInputValue(selectedDate);
+
+      closeCalendar();
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const formInputsBlocks = document.querySelectorAll('.form-calendar__inputs');
+
+  if (formInputsBlocks.length > 0) {
+    formInputsBlocks.forEach(block => {
+      block.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        const isCalendarClick = e.target.closest('.calendar');
+        const isCalendarBtnClick = e.target.closest('.calendar-btn');
+
+        if (isCalendarClick || isCalendarBtnClick) {
+          return;
+        }
+
+        const wasActive = this.classList.contains('active');
+
+        document.querySelectorAll('.form-calendar__inputs').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        document.documentElement.classList.remove('open-calendar');
+
+        if (!wasActive) {
+          this.classList.add('active');
+          document.documentElement.classList.add('open-calendar');
+        }
+      });
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.form-calendar__inputs')) {
+      document.querySelectorAll('.form-calendar__inputs').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      document.documentElement.classList.remove('open-calendar');
+    }
+  });
+});
+
+//========================================================================================================================================================
+
+const calendarBlocks = document.querySelectorAll('.block-cart-calendar');
+
+if (calendarBlocks) {
+  calendarBlocks.forEach(block => {
+    const button = block.querySelector('.block-cart-calendar__button');
+
+    if (button) {
+      button.addEventListener('click', function (e) {
+        e.stopPropagation();
+        block.classList.toggle('active');
+      });
+    }
+  });
+}
+
+//========================================================================================================================================================
+
+function initServicesPopup() {
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        const popup = mutation.target;
+        if (popup.classList.contains('popup_show')) {
+          setTimeout(() => {
+            initPopupHandlers();
+          }, 100);
+        }
+      }
+    });
+  });
+
+  const popups = document.querySelectorAll('.services-popup');
+  if (popups.length > 0) {
+    popups.forEach(popup => {
+      observer.observe(popup, { attributes: true });
+    });
+  }
+
+  const domObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      mutation.addedNodes.forEach(node => {
+        if (node.nodeType === 1 && node.classList && node.classList.contains('services-popup')) {
+          observer.observe(node, { attributes: true });
+
+          if (node.classList.contains('popup_show')) {
+            setTimeout(() => {
+              initPopupHandlers();
+            }, 100);
+          }
+        }
+      });
+    });
+  });
+
+  if (document.body) {
+    domObserver.observe(document.body, { childList: true, subtree: true });
+  }
+
+  function initPopupHandlers() {
+    const activePopup = document.querySelector('.services-popup.popup_show');
+
+    if (!activePopup) return false;
+
+    const mainImage = activePopup.querySelector('.services-popup__image img');
+    const colorItems = activePopup.querySelectorAll('.services-popup-color');
+
+    if (!mainImage || colorItems.length === 0) return false;
+
+    const originalImageSrc = mainImage.src;
+
+    function changeImageSmooth(newSrc) {
+      if (mainImage.src === newSrc) return;
+
+      mainImage.classList.add('fade-out');
+
+      setTimeout(() => {
+        mainImage.src = newSrc;
+        mainImage.classList.remove('fade-out');
+        mainImage.classList.add('fade-in');
+
+        setTimeout(() => {
+          mainImage.classList.remove('fade-in');
+        }, 100);
+      }, 100);
+    }
+
+    colorItems.forEach(item => {
+      item.removeEventListener('mouseenter', handleMouseEnter);
+      item.removeEventListener('mouseleave', handleMouseLeave);
+
+      item.addEventListener('mouseenter', handleMouseEnter);
+      item.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    function handleMouseEnter() {
+      const newImageSrc = this.dataset.image;
+      if (newImageSrc) {
+        changeImageSmooth(newImageSrc);
+      }
+    }
+
+    function handleMouseLeave() {
+      changeImageSmooth(originalImageSrc);
+    }
+
+    return true;
+  }
+
+  if (document.querySelector('.services-popup.popup_show')) {
+    initPopupHandlers();
+  }
+}
+initServicesPopup();
